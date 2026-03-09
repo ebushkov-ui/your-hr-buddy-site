@@ -1,35 +1,35 @@
-import { Shield, Users, TrendingUp, FileCheck, Briefcase, GraduationCap } from "lucide-react";
+import { Globe, Shield, Cpu, BarChart3, Users, Settings } from "lucide-react";
 
 const services = [
   {
+    icon: Globe,
+    title: "Global HR Infrastructure",
+    description: "Build compliant, scalable People Operations across multiple entities and international markets.",
+  },
+  {
     icon: Shield,
-    title: "HR Compliance",
-    description: "Stay ahead of employment law. We audit, advise, and implement policies that protect your business.",
+    title: "Governance & Compliance",
+    description: "Employment law audits, policy development, and risk mitigation to protect your business globally.",
+  },
+  {
+    icon: Cpu,
+    title: "HR Tech & Automation",
+    description: "Enterprise HRIS strategy, system integrations, and AI-enabled service models that eliminate manual workflows.",
+  },
+  {
+    icon: BarChart3,
+    title: "People Analytics & Reporting",
+    description: "Executive dashboards, workforce planning insights, and data governance that drives confident decision-making.",
   },
   {
     icon: Users,
-    title: "Talent Acquisition",
-    description: "Attract and hire the right people with proven recruitment strategies tailored to your industry.",
+    title: "Organizational Design",
+    description: "Restructuring advisory, change management, and operating model design aligned to business growth.",
   },
   {
-    icon: TrendingUp,
-    title: "Performance Management",
-    description: "Build frameworks that motivate teams, drive accountability, and align with business goals.",
-  },
-  {
-    icon: FileCheck,
-    title: "Policy Development",
-    description: "Comprehensive employee handbooks and workplace policies that are clear, fair, and legally sound.",
-  },
-  {
-    icon: Briefcase,
-    title: "HR Strategy",
-    description: "From startups to scaling enterprises, we design people strategies that fuel sustainable growth.",
-  },
-  {
-    icon: GraduationCap,
-    title: "Training & Development",
-    description: "Leadership workshops, team coaching, and development programs that elevate your workforce.",
+    icon: Settings,
+    title: "Operational Excellence",
+    description: "End-to-end process reengineering — onboarding, offboarding, payroll, and service delivery optimization.",
   },
 ];
 
@@ -40,10 +40,10 @@ const ServicesSection = () => {
         <div className="max-w-2xl mb-16">
           <span className="text-sm font-heading font-semibold text-accent uppercase tracking-widest">Services</span>
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mt-3 mb-4">
-            What we do<span className="text-accent">.</span>
+            What I do<span className="text-accent">.</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            End-to-end HR solutions designed to simplify people management and accelerate your business.
+            Strategic People Operations consulting for organizations navigating growth, complexity, and global scale.
           </p>
         </div>
 

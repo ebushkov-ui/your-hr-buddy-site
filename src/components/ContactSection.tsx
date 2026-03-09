@@ -9,19 +9,19 @@ const ContactSection = () => {
           <div>
             <span className="text-sm font-heading font-semibold text-accent uppercase tracking-widest">Contact</span>
             <h2 className="font-heading text-4xl md:text-5xl font-bold mt-3 mb-6">
-              Let's talk about
+              Let's build your
               <br />
-              your people<span className="text-accent">.</span>
+              people operations<span className="text-accent">.</span>
             </h2>
             <p className="text-lg opacity-70 mb-10 leading-relaxed max-w-md">
-              Whether you need a one-off compliance review or an ongoing HR partner, we're here to help.
+              Whether you need a global HR infrastructure overhaul or strategic advisory, I'm here to help.
             </p>
 
             <div className="space-y-4">
               {[
-                { icon: Mail, text: "hello@elaineadamson.com" },
-                { icon: Phone, text: "+44 (0) 7700 900 000" },
-                { icon: MapPin, text: "London, United Kingdom" },
+                { icon: Mail, text: "ebushkov@gmail.com" },
+                { icon: Phone, text: "(650) 520-0339" },
+                { icon: MapPin, text: "Bay Area, CA" },
               ].map((item) => (
                 <div key={item.text} className="flex items-center gap-3 opacity-70">
                   <item.icon className="h-5 w-5 text-accent" />
@@ -55,7 +55,7 @@ const ContactSection = () => {
                 <textarea
                   rows={4}
                   className="w-full px-4 py-3 rounded-md border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 resize-none"
-                  placeholder="Tell us about your HR needs..."
+                  placeholder="Tell us about your People Operations needs..."
                 />
               </div>
               <Button
