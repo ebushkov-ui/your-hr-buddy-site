@@ -1,10 +1,11 @@
 import { CheckCircle } from "lucide-react";
 
 const reasons = [
-  "20+ years of HR consulting experience",
-  "Trusted by 100+ businesses across industries",
-  "CIPD-qualified and employment law specialists",
-  "Tailored solutions, not one-size-fits-all",
+  "20+ years in People Operations & HR strategy",
+  "Global experience across 7+ countries and 1,300+ employee orgs",
+  "Expert in Workday, ADP, Darwinbox, and enterprise HR tech stacks",
+  "Proven results: 40–60% workflow reduction through automation",
+  "Background at Apollo.io, DigitalOcean, Nest Labs (Google), and more",
 ];
 
 const AboutSection = () => {
@@ -17,9 +18,9 @@ const AboutSection = () => {
             <div className="grid grid-cols-2 gap-6">
               {[
                 { value: "20+", label: "Years Experience" },
-                { value: "100+", label: "Clients Served" },
-                { value: "500+", label: "Projects Delivered" },
-                { value: "98%", label: "Client Retention" },
+                { value: "7+", label: "Countries Operated In" },
+                { value: "1,300+", label: "Employees Supported" },
+                { value: "$200K+", label: "Annual Cost Savings Delivered" },
               ].map((stat) => (
                 <div
                   key={stat.label}
@@ -34,14 +35,14 @@ const AboutSection = () => {
 
           {/* Right — Text */}
           <div>
-            <span className="text-sm font-heading font-semibold text-accent uppercase tracking-widest">Why Us</span>
+            <span className="text-sm font-heading font-semibold text-accent uppercase tracking-widest">About</span>
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mt-3 mb-6">
-              Your people are your
+              Turning complexity into
               <br />
-              greatest asset<span className="text-accent">.</span>
+              structured operations<span className="text-accent">.</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              At Elaine Adamson Consulting, we partner with businesses to build HR foundations that support growth, reduce risk, and create workplaces where people thrive.
+              I partner with high-growth and multi-entity organizations to architect global HR infrastructure — building scalable systems that reduce risk, strengthen governance, and enable confident decision-making at the executive level.
             </p>
 
             <ul className="space-y-4">
