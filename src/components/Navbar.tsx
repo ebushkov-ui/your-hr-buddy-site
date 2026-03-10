@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -14,8 +15,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-6">
-        <a href="#" className="font-heading text-xl font-bold tracking-tight text-foreground">
-          Elaine Adamson<span className="text-accent">.</span>
+        <a href="#" className="flex items-center">
+          <img src={logo} alt="Elaine Adamson" className="h-8" />
         </a>
         <div className="hidden md:flex items-center gap-8">
           {links.map((l) => (
