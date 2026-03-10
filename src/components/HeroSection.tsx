@@ -12,10 +12,6 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 mb-8">
-            <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
-            <span className="text-sm font-medium text-accent">Director of People Operations</span>
-          </div>
 
           <h1 className="font-heading text-5xl md:text-7xl font-bold leading-[1.05] tracking-tight text-foreground mb-6">
             People strategy
