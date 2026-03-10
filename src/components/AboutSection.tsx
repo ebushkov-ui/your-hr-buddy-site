@@ -3,7 +3,7 @@ import { CheckCircle } from "lucide-react";
 const reasons = [
   "20+ years in People Operations & HR strategy",
   "Global experience across 7+ countries and 1,300+ employee orgs",
-  "Expert in Workday, ADP, Darwinbox, and enterprise HR tech stacks",
+  "Expert in Workday, ADP, BambooHR, and enterprise HR tech stacks",
   "Proven results: 40–60% workflow reduction through automation",
   "Background at Apollo.io, DigitalOcean, Nest Labs (Google), and more",
 ];
