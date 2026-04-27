@@ -19,7 +19,7 @@ const ContactSection = () => {
 
             <div className="space-y-4">
               {[
-                { icon: Mail, text: "elaineadamsondoeshr@gmail.com" },
+                { icon: Mail, text: "elaine@elaineadamson.com" },
                 { icon: Phone, text: "(650) 520-0339" },
                 { icon: MapPin, text: "Bay Area, CA" },
               ].map((item) => (
