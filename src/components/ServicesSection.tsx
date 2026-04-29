@@ -4,17 +4,17 @@ const services = [
   {
     icon: Search,
     title: "Diagnose what is broken",
-    description: "Most companies start fixing before they understand the real problem. I run a five-day diagnostic so you stop spending money on the wrong things and know exactly where the risk is.",
+    description: "Most companies start fixing before they understand the real problem. I run a five-day diagnostic across your people data, systems, compliance posture, and operating model. You walk out knowing exactly where the risk is, what is costing you money, and what to fix first.",
   },
   {
     icon: Wrench,
     title: "Build the foundation",
-    description: "Clean up the data. Stand up the systems. Build (or rebuild) the HR function so your company can keep scaling without breaking. The plumbing nobody had time to put in.",
+    description: "Clean up the data. Stand up the systems. Build the HR function from the ground up. Payroll, HRIS, onboarding, policy, compliance, manager workflows. The plumbing nobody had time to put in, built so it holds when you add the next hundred people.",
   },
   {
     icon: Globe,
     title: "Move off your EOR or PEO",
-    description: "Stand up real entities, build the compliance foundation, and own your international presence. Almost nobody specializes in this. I do.",
+    description: "When companies outgrow Deel, Rippling, or TriNet, they need real entities and local payroll. I take you off, stand up the entity infrastructure, build the compliance foundation, and own the transition end-to-end. UK, Japan, and beyond. Almost nobody specializes in this. I do.",
   },
 ];
 
@@ -28,7 +28,7 @@ const ServicesSection = () => {
             What I do<span className="text-accent">.</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Three things, done well. Diagnose first, then build what needs to exist.
+            For founders, COOs, and CHROs at companies between 50 and 500 employees. Three things, done well. Diagnose first, then build what needs to exist.
           </p>
         </div>
 
