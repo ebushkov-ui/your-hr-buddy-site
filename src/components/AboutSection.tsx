@@ -42,7 +42,7 @@ const AboutSection = () => {
               the janitor<span className="text-accent">.</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              I come in when companies are scaling faster than their HR infrastructure and I figure out what is actually broken before anyone starts fixing it. Sometimes that is cleaning up people data and systems. Sometimes it is building the HR function from the ground up. Often it is standing up the international infrastructure nobody had time to create. I get embedded, I get it done, and I wear the janitor label proudly.
+              I come in at the moment Series A chaos needs to become Series B infrastructure. Companies scaling faster than their HR can hold. The people side starting to crack. I diagnose what is actually broken before anyone starts fixing it. Sometimes that is cleaning up people data and systems. Sometimes it is building the HR function from the ground up. Often it is standing up the international infrastructure nobody had time to create. I get embedded, I get it done, and I wear the janitor label proudly.
             </p>
 
             <ul className="space-y-4">
