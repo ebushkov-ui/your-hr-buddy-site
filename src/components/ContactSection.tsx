@@ -1,7 +1,56 @@
-import { ArrowRight, Mail, Phone, MapPin } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const ContactSection = () => {
+  useEffect(() => {
+    (function (C: any, A: string, L: string) {
+      let p = function (a: any, ar: any) {
+        a.q.push(ar);
+      };
+      let d = C.document;
+      C.Cal =
+        C.Cal ||
+        function (...args: any[]) {
+          let cal = C.Cal;
+          let ar = args;
+          if (!cal.loaded) {
+            cal.ns = {};
+            cal.q = cal.q || [];
+            d.head.appendChild(d.createElement("script")).src = A;
+            cal.loaded = true;
+          }
+          if (ar[0] === L) {
+            const api: any = function (...apiArgs: any[]) {
+              p(api, apiArgs);
+            };
+            const namespace = ar[1];
+            api.q = api.q || [];
+            if (typeof namespace === "string") {
+              cal.ns[namespace] = cal.ns[namespace] || api;
+              p(cal.ns[namespace], ar);
+              p(cal, ["initNamespace", namespace]);
+            } else p(cal, ar);
+            return;
+          }
+          p(cal, ar);
+        };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
+
+    // @ts-ignore
+    window.Cal("init", "elaine-adamson", { origin: "https://app.cal.com" });
+    // @ts-ignore
+    window.Cal.ns["elaine-adamson"]("inline", {
+      elementOrSelector: "#cal-inline-embed",
+      calLink: "elaine-adamson",
+      layout: "month_view",
+    });
+    // @ts-ignore
+    window.Cal.ns["elaine-adamson"]("ui", {
+      hideEventTypeDetails: false,
+      layout: "month_view",
+    });
+  }, []);
+
   return (
     <section id="contact" className="py-24 md:py-32 bg-primary text-primary-foreground">
       <div className="container mx-auto px-6">
@@ -31,41 +80,22 @@ const ContactSection = () => {
             </div>
           </div>
 
-          <div className="bg-card text-card-foreground rounded-lg p-8 md:p-10">
-            <h3 className="font-heading text-2xl font-bold mb-6">Book a Free Consultation</h3>
-            <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
-              <div>
-                <label className="block text-sm font-medium text-muted-foreground mb-1.5">Full Name</label>
-                <input
-                  type="text"
-                  className="w-full h-11 px-4 rounded-md border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50"
-                  placeholder="Your name"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-muted-foreground mb-1.5">Email</label>
-                <input
-                  type="email"
-                  className="w-full h-11 px-4 rounded-md border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50"
-                  placeholder="you@company.com"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-muted-foreground mb-1.5">Message</label>
-                <textarea
-                  rows={4}
-                  className="w-full px-4 py-3 rounded-md border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 resize-none"
-                  placeholder="Tell us about your People Operations needs..."
-                />
-              </div>
-              <Button
-                type="submit"
-                className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-heading font-semibold text-base h-12"
+          <div className="bg-card text-card-foreground rounded-lg p-4 md:p-6">
+            <h3 className="font-heading text-2xl font-bold mb-4">Book a Free Consultation</h3>
+            <div
+              id="cal-inline-embed"
+              className="w-full overflow-hidden rounded-md"
+              style={{ minHeight: "600px" }}
+            />
+            <p className="text-sm text-muted-foreground mt-4 text-center">
+              Or email me at{" "}
+              <a
+                href="mailto:elaine@elaineadamson.com"
+                className="text-accent hover:underline font-medium"
               >
-                Send Message
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </form>
+                elaine@elaineadamson.com
+              </a>
+            </p>
           </div>
         </div>
       </div>
