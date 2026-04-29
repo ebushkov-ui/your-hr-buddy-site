@@ -14,15 +14,15 @@ const HeroSection = () => {
         <div className="max-w-3xl">
 
           <h1 className="font-heading text-5xl md:text-7xl font-bold leading-[1.05] tracking-tight text-foreground mb-6">
-            People strategy
+            Fractional HR Leader
             <br />
-            that scales{" "}
-            <span className="text-accent">globally</span>
+            for scaling{" "}
+            <span className="text-accent">startups</span>
             <span className="text-accent">.</span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-xl mb-10 leading-relaxed">
-            20+ years building global HR infrastructure for high-growth organizations — from compliance and workforce planning to AI-enabled operations.
+            I diagnose what is broken before anyone starts fixing it. Twenty years building People functions for companies that have outgrown what got them here. I get embedded, I get it done, and I do it fast.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -32,7 +32,7 @@ const HeroSection = () => {
               className="bg-accent text-accent-foreground hover:bg-accent/90 font-heading font-semibold text-base px-8 h-12"
             >
               <a href="#contact">
-                Book a Consultation
+                Book a Call
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>
@@ -42,7 +42,7 @@ const HeroSection = () => {
               size="lg"
               className="font-heading font-semibold text-base px-8 h-12 border-foreground/20 hover:bg-foreground/5"
             >
-              <a href="#services">My Services</a>
+              <a href="#services">See How I Work</a>
             </Button>
           </div>
         </div>

@@ -1,35 +1,20 @@
-import { Globe, Shield, Cpu, BarChart3, Users, Settings } from "lucide-react";
+import { Search, Wrench, Globe } from "lucide-react";
 
 const services = [
   {
+    icon: Search,
+    title: "Diagnose what is broken",
+    description: "Most companies start fixing before they understand the real problem. I run a five-day diagnostic so you stop spending money on the wrong things and know exactly where the risk is.",
+  },
+  {
+    icon: Wrench,
+    title: "Build the foundation",
+    description: "Clean up the data. Stand up the systems. Build (or rebuild) the HR function so your company can keep scaling without breaking. The plumbing nobody had time to put in.",
+  },
+  {
     icon: Globe,
-    title: "Global HR Infrastructure",
-    description: "Build compliant, scalable People Operations across multiple entities and international markets.",
-  },
-  {
-    icon: Shield,
-    title: "Governance & Compliance",
-    description: "Employment law audits, policy development, and risk mitigation to protect your business globally.",
-  },
-  {
-    icon: Cpu,
-    title: "HR Tech & Automation",
-    description: "Enterprise HRIS strategy, system integrations, and AI-enabled service models that eliminate manual workflows.",
-  },
-  {
-    icon: BarChart3,
-    title: "People Analytics & Reporting",
-    description: "Executive dashboards, workforce planning insights, and data governance that drives confident decision-making.",
-  },
-  {
-    icon: Users,
-    title: "Organizational Design",
-    description: "Restructuring advisory, change management, and operating model design aligned to business growth.",
-  },
-  {
-    icon: Settings,
-    title: "Operational Excellence",
-    description: "End-to-end process reengineering — onboarding, offboarding, payroll, and service delivery optimization.",
+    title: "Move off your EOR or PEO",
+    description: "Stand up real entities, build the compliance foundation, and own your international presence. Almost nobody specializes in this. I do.",
   },
 ];
 
@@ -43,11 +28,11 @@ const ServicesSection = () => {
             What I do<span className="text-accent">.</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Strategic People Operations consulting for organizations navigating growth, complexity, and global scale.
+            Three things, done well. Diagnose first, then build what needs to exist.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-6">
           {services.map((service) => (
             <div
               key={service.title}
