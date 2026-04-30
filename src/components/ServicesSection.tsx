@@ -28,7 +28,7 @@ const ServicesSection = () => {
             What I do<span className="text-accent">.</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            For founders, COOs, and CHROs at companies between 50 and 500 employees. Three things, done well. Diagnose first, then build what needs to exist.
+            For founders, COOs, and CHROs at companies up to 500 employees. Three things, done well. Diagnose first, then build what needs to exist.
           </p>
         </div>
 
