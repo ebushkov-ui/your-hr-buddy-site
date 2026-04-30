@@ -37,12 +37,12 @@ const AboutSection = () => {
           <div>
             <span className="text-sm font-heading font-semibold text-accent uppercase tracking-widest">About</span>
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mt-3 mb-6">
-              People call me
+              People call me the
               <br />
-              the janitor<span className="text-accent">.</span>
+              Chief Problem Solver<span className="text-accent">.</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              I come in at the moment Series A chaos needs to become Series B infrastructure. Companies scaling faster than their HR can hold. The people side starting to crack. I diagnose what is actually broken before anyone starts fixing it. Sometimes that is cleaning up people data and systems. Sometimes it is building the HR function from the ground up. Often it is standing up the international infrastructure nobody had time to create. I get embedded, I get it done, and I wear the janitor label proudly.
+              I come in at the moment Series A chaos needs to become Series B infrastructure. Companies scaling faster than their HR can hold. The people side starting to crack. I diagnose what is actually broken before anyone starts fixing it. Sometimes that is cleaning up people data and systems. Sometimes it is building the HR function from the ground up. Often it is standing up the international infrastructure nobody had time to create. I get embedded, I get it done, and I solve the problems nobody else has time to.
             </p>
 
             <ul className="space-y-4">
