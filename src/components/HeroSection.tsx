@@ -32,7 +32,7 @@ const HeroSection = () => {
               className="bg-accent text-accent-foreground hover:bg-accent/90 font-heading font-semibold text-base px-8 h-12"
             >
               <a href="#contact">
-                Book a Call
+                Hand me the mess
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>
@@ -45,6 +45,7 @@ const HeroSection = () => {
               <a href="#services">See How I Work</a>
             </Button>
           </div>
+          <p className="text-sm text-muted-foreground mt-3">Schedule a 30-min call</p>
         </div>
       </div>
 
