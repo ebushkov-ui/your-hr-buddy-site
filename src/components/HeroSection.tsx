@@ -14,7 +14,7 @@ const HeroSection = () => {
         <div className="max-w-3xl">
 
           <h1 className="font-heading text-5xl md:text-7xl font-bold leading-[1.05] tracking-tight text-foreground mb-6">
-            HR Consultant
+            Fractional HR Consultant
             <br />
             for scaling{" "}
             <span className="text-accent">startups</span>
