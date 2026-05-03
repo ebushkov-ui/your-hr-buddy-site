@@ -5,7 +5,7 @@ const reasons = [
   "Built global infrastructure across 7+ countries and 1,300+ employee orgs",
   "Deep stack experience: Workday, ADP, Rippling, ChartHop, BambooHR, Paylocity",
   "Eliminated 60% of manual workflows and delivered $200K+ in annual savings",
-  "Background at Apollo.io, DigitalOcean, Nest Labs, Google, Intapp and more",
+  "Background at Apollo.io, DigitalOcean, Nest Labs, Google, Intapp, and more",
 ];
 
 const AboutSection = () => {
