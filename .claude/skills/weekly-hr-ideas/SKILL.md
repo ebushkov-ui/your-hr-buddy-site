@@ -15,22 +15,27 @@ The goal is signal, not summary. Each idea should be something Elaine could repu
 
 Use the Gmail MCP tools on ebushkov@gmail.com. This account receives email for elaine@elaineadamson.com as well, so one search covers both.
 
-Run a search that combines known HR newsletter senders, common newsletter labels, and HR/people-ops keywords. Use a Gmail query like:
+Primary source: the Gmail label **HR Subscriptions**. Run:
+
+```
+label:"HR Subscriptions" newer_than:7d
+```
+
+This is the cleanest signal — only emails Elaine has explicitly tagged as HR newsletter subscriptions. Use this query first.
+
+Fallback: if the label search returns fewer than 3 threads (label may have drifted, new sub not yet labeled), broaden with:
 
 ```
 newer_than:7d (
-  from:(*@hrbrew.com OR *@hrdive.com OR *@charter.works OR *@joshbersin.com
-    OR *@shrm.org OR *@lattice.com OR *@bamboohr.com OR *@gusto.com
-    OR *@peoplemanagingpeople.com OR *@hrmorning.com OR *@workology.com
-    OR recruitingbrainfood OR "Hung Lee" OR "Resources for Humans"
-    OR newsletter OR digest OR weekly)
-  OR subject:(newsletter OR weekly OR digest OR "this week in")
-  OR label:newsletters
-  OR category:promotions HR
+  label:"HR Subscriptions"
+  OR from:(*@hrbrew.com OR *@hrdive.com OR *@charter.works OR *@joshbersin.com
+    OR *@shrm.org OR *@lattice.com OR *@peoplemanagingpeople.com
+    OR recruitingbrainfood OR "Hung Lee" OR "Resources for Humans")
+  OR subject:("this week in HR" OR "HR weekly" OR "people ops digest")
 )
 ```
 
-If Elaine has a Gmail label like `Newsletters` or `HR`, prefer that — it's the cleanest signal. Confirm the label exists before relying on it.
+When the fallback fires, flag it in the digest output so Elaine knows to re-label any subs that fell out of the label.
 
 Pull each thread's:
 - Sender name + sender email
@@ -147,4 +152,4 @@ Sources this week: [List newsletter names + count, e.g., "HR Brew (3), Charter (
 - The "Could become a post" section is the highest-leverage part for Elaine's practice — prioritize finding 1-2 strong angles each week
 - Voice: direct, no corporate filler, no "in today's fast-paced world" phrasing
 - If fewer than 3 newsletters arrived in the last 7 days, note that at the top and keep the digest short rather than padding
-- Sender list above is a starting point — update as Elaine's subscriptions evolve. A Gmail label is more reliable long-term
+- The `HR Subscriptions` Gmail label is the source of truth — when Elaine adds a new sub, she should label it so future runs include it
