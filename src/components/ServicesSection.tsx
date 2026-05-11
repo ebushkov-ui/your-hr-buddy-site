@@ -28,7 +28,7 @@ const ServicesSection = () => {
             What I do<span className="text-accent">.</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Three things, done well. Diagnose first, then build what needs to exist.
+            Diagnose first, then build what needs to exist.
           </p>
         </div>
 

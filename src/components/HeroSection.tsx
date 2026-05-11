@@ -22,7 +22,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-foreground max-w-2xl mb-6 leading-relaxed font-medium">
-            For founders, COOs, and CHROs at companies up to 500 employees. Build, reset, or refresh your people operations. Three things, done well.
+            For founders, COOs, and CHROs at companies up to 500 employees. Build, reset, or refresh your people operations.
           </p>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-xl mb-10 leading-relaxed">
