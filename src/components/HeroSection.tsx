@@ -21,6 +21,10 @@ const HeroSection = () => {
             <span className="text-accent">.</span>
           </h1>
 
+          <p className="text-lg md:text-xl text-foreground max-w-2xl mb-6 leading-relaxed font-medium">
+            For founders, COOs, and CHROs at companies up to 500 employees. Build, reset, or refresh your people operations. Three things, done well.
+          </p>
+
           <p className="text-lg md:text-xl text-muted-foreground max-w-xl mb-10 leading-relaxed">
             I diagnose what is broken before anyone starts fixing it. Twenty years building People functions for companies that have outgrown what got them here. I get embedded, I get it done, and I do it fast.
           </p>
