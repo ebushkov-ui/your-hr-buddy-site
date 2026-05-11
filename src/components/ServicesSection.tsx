@@ -14,7 +14,7 @@ const services = [
   {
     icon: Globe,
     title: "Move off your EOR or PEO",
-    description: "When companies outgrow Deel, Rippling, or TriNet, they need real entities and local payroll. I take you off, stand up the entity infrastructure, build the compliance foundation, and own the transition end-to-end. UK, Japan, and beyond. Almost nobody specializes in this. I do.",
+    description: "When companies outgrow Deel, Rippling, or TriNet, they need real entities and local payroll. I take you off, stand up the entity infrastructure, build the compliance foundation, and own the transition end-to-end. Mexico, Japan, and beyond. Almost nobody specializes in this. I do.",
   },
 ];
 
@@ -28,7 +28,7 @@ const ServicesSection = () => {
             What I do<span className="text-accent">.</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            For founders, COOs, and CHROs at companies up to 500 employees. Three things, done well. Diagnose first, then build what needs to exist.
+            Three things, done well. Diagnose first, then build what needs to exist.
           </p>
         </div>
 
