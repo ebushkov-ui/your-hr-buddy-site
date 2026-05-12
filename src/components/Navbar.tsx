@@ -14,13 +14,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-6">
-        <a href="#" className="flex items-baseline gap-2" aria-label="Elaine Adamson Consulting">
-          <span className="font-heading text-sm font-light tracking-[0.2em] uppercase text-foreground">
-            Elaine Adamson
-          </span>
-          <span className="font-heading text-sm font-light italic text-muted-foreground hidden sm:inline">
-            consulting
-          </span>
+        <a href="#" className="flex items-center" aria-label="Elaine Adamson Consulting">
+          <img src="/logo.png" alt="Elaine Adamson Consulting" className="h-9 w-auto" />
         </a>
         <div className="hidden md:flex items-center gap-8">
           {links.map((l) => (
