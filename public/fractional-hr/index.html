@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Elaine Adamson Consulting — One-Pager (Fractional HR Overview)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Space+Grotesk:wght@500;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --royal: #3754DC;
+    --periwinkle: #8590E8;
+    --periwinkle-tint: #EEF0FB;
+    --ink: #14154A;
+    --muted: #6B6E8A;
+    --ground: #F8F6F0;
+    --line: #E3DED2;
+    --charcoal: #0F1126;
+    --white: #FFFFFF;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: #ECECEC;
+    font-family: 'DM Sans', Arial, sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .page {
+    width: 8.5in;
+    height: 11in;
+    margin: 0.5in auto;
+    background: var(--ground);
+    padding: 0.45in 0.5in 0 0.5in;
+    box-shadow: 0 6px 24px rgba(20,21,74,0.12);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* HEADER */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 14px;
+    border-bottom: 3px solid var(--royal);
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .logo-mark {
+    width: 44px;
+    height: 44px;
+    background: var(--royal);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 3px;
+    padding: 6px;
+    border-radius: 3px;
+  }
+  .logo-mark span {
+    background: var(--white);
+    border-radius: 1px;
+  }
+  .brand-text .name {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    line-height: 1.1;
+  }
+  .brand-text .tag {
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-size: 9.5px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    color: var(--muted);
+    margin-top: 4px;
+    text-transform: uppercase;
+  }
+  .focus {
+    text-align: right;
+  }
+  .focus .label {
+    font-size: 9.5px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+  .focus .value {
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 11.5px;
+    letter-spacing: 0.08em;
+    color: var(--royal);
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  /* INTRO */
+  .intro {
+    margin-top: 14px;
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: var(--ink);
+    max-width: 100%;
+  }
+  .intro strong {
+    color: var(--royal);
+    font-weight: 700;
+  }
+
+  /* TWO-COL LAYOUT */
+  .columns {
+    display: grid;
+    grid-template-columns: 1.55fr 1fr;
+    gap: 14px;
+    margin-top: 14px;
+  }
+
+  /* TIER CARDS (left column) */
+  .tier {
+    background: var(--periwinkle-tint);
+    border-left: 4px solid var(--royal);
+    padding: 11px 14px;
+    margin-bottom: 9px;
+  }
+  .tier:last-child { margin-bottom: 0; }
+  .tier .kicker {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    color: var(--royal);
+    text-transform: uppercase;
+  }
+  .tier h2 {
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--ink);
+    margin-top: 3px;
+    line-height: 1.15;
+  }
+  .tier .lede {
+    font-size: 11px;
+    color: var(--ink);
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+  .tier ul {
+    list-style: none;
+    margin-top: 8px;
+  }
+  .tier li {
+    font-size: 10.5px;
+    color: var(--ink);
+    line-height: 1.45;
+    padding-left: 14px;
+    position: relative;
+    margin-top: 3px;
+  }
+  .tier li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--royal);
+    font-weight: 700;
+  }
+
+  /* SPECIALTY PANEL (right column) */
+  .specialty {
+    background: var(--royal);
+    color: var(--white);
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+  }
+  .specialty .kicker {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    color: var(--periwinkle);
+    text-transform: uppercase;
+    line-height: 1.3;
+  }
+  .specialty h2 {
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 19px;
+    margin-top: 4px;
+    line-height: 1.1;
+  }
+  .specialty p {
+    font-size: 10.5px;
+    line-height: 1.45;
+    margin-top: 8px;
+    color: rgba(255,255,255,0.92);
+  }
+  .specialty p.proof {
+    margin-top: 10px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--white);
+  }
+  .specialty hr {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.25);
+    margin: 10px 0;
+  }
+  .specialty .sub-kicker {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    color: var(--periwinkle);
+    text-transform: uppercase;
+  }
+  .specialty ul {
+    list-style: none;
+    margin-top: 8px;
+  }
+  .specialty li {
+    font-size: 10.5px;
+    line-height: 1.45;
+    padding-left: 14px;
+    position: relative;
+    margin-top: 5px;
+    color: rgba(255,255,255,0.92);
+  }
+  .specialty li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--periwinkle);
+    font-weight: 700;
+  }
+  .specialty .meta {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 14px;
+    row-gap: 5px;
+    font-size: 10px;
+  }
+  .specialty .meta dt {
+    color: var(--periwinkle);
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-size: 9px;
+  }
+  .specialty .meta dd { font-weight: 500; }
+  .cta {
+    margin-top: 10px;
+    background: var(--white);
+    color: var(--royal);
+    text-align: center;
+    padding: 9px;
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  /* PRICING TABLE */
+  .pricing {
+    margin-top: 14px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    padding: 12px 16px;
+  }
+  .pricing-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+  }
+  .pricing-head h3 {
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--royal);
+  }
+  .pricing-head .caption {
+    font-size: 10px;
+    color: var(--muted);
+  }
+  table {
+    width: 100%;
+    margin-top: 8px;
+    border-collapse: collapse;
+  }
+  thead th {
+    text-align: left;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    color: var(--muted);
+    text-transform: uppercase;
+    padding: 8px 6px 8px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  tbody td {
+    font-size: 11px;
+    padding: 8px 6px 8px 0;
+    color: var(--ink);
+    vertical-align: top;
+    border-bottom: 1px solid var(--line);
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  td.tier-name {
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--royal);
+    width: 90px;
+  }
+  td.format { width: 90px; color: var(--ink); }
+  td.investment {
+    width: 130px;
+  }
+  td.investment .starting {
+    font-size: 8.5px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: var(--muted);
+    text-transform: uppercase;
+    display: block;
+  }
+  td.investment .amount {
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-weight: 700;
+    color: var(--ink);
+    font-size: 13px;
+    margin-top: 2px;
+    display: block;
+  }
+  td.right-for { color: var(--ink); line-height: 1.5; }
+
+  /* NOTE */
+  .note {
+    margin-top: 9px;
+    text-align: center;
+    font-size: 9.5px;
+    color: var(--muted);
+    font-style: italic;
+    line-height: 1.5;
+  }
+  .note strong {
+    font-style: normal;
+    font-weight: 700;
+    color: var(--ink);
+    font-style: italic;
+  }
+
+  /* FOOTER BAND */
+  .footer {
+    margin-top: auto;
+    padding-top: 10px;
+  }
+  .footer-band {
+    background: var(--royal);
+    color: var(--white);
+    padding: 9px 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    font-size: 10.5px;
+  }
+  .footer-band .name {
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+  .footer-band a {
+    color: var(--periwinkle);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .footer-band .sep { opacity: 0.5; }
+  .footer-band .meta-text { color: rgba(255,255,255,0.85); }
+
+  @media print {
+    @page { size: Letter; margin: 0; }
+    html, body { background: var(--ground); }
+    .page {
+      margin: 0;
+      box-shadow: none;
+      width: 8.5in;
+      min-height: 11in;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="header">
+    <div class="brand">
+      <div class="logo-mark" aria-hidden="true">
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+      </div>
+      <div class="brand-text">
+        <div class="name">ELAINE ADAMSON CONSULTING</div>
+        <div class="tag">Build, reset or refresh your HR ops</div>
+      </div>
+    </div>
+    <div class="focus">
+      <div class="label">Engagement Focus</div>
+      <div class="value">Fractional HR, startups to 500</div>
+    </div>
+  </header>
+
+  <p class="intro">
+    Fractional HR for companies that know something isn't working but aren't sure what to fix first.
+    <strong>I diagnose what is broken before anyone starts fixing it</strong> — then build the systems, processes, and people foundation that make scaling sustainable.
+  </p>
+
+  <div class="columns">
+
+    <div class="tiers">
+
+      <div class="tier">
+        <div class="kicker">01 — Map</div>
+        <h2>The Diagnostic</h2>
+        <p class="lede">Find out what is actually broken before anyone fixes anything.</p>
+        <ul>
+          <li>Audit of HR operations, payroll, benefits, and compliance posture</li>
+          <li>Written findings, prioritized recommendations, and risk flags</li>
+          <li>Fixed fee, defined output, defined end. Natural on-ramp to Build.</li>
+        </ul>
+      </div>
+
+      <div class="tier">
+        <div class="kicker">02 — Build</div>
+        <h2>Embedded &amp; Hands-On</h2>
+        <p class="lede">The heavy build phase. Embedded retainer, not advisory.</p>
+        <ul>
+          <li>HR ops cleanup, HRIS implementation, process and automation</li>
+          <li>Payroll and benefits administration, EOR and PEO transitions, entity setup</li>
+          <li>Handbooks, policy, onboarding, and the people systems that scale</li>
+        </ul>
+      </div>
+
+      <div class="tier">
+        <div class="kicker">03 — Sustain</div>
+        <h2>Post-Build Partnership</h2>
+        <p class="lede">Lighter relationship after the heavy lift is done.</p>
+        <ul>
+          <li>On-call access for senior judgment when something comes up</li>
+          <li>Monthly check-in and strategic input as needed</li>
+          <li>For companies that have the foundation but want a partner on the bench</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <aside class="specialty">
+      <h2>Not Sure What You Need?</h2>
+      <p>
+        Most companies know something's off — onboarding, compliance, payroll, the benefits renewal, the HRIS nobody set up right. They just can't name what to fix first. That's what the diagnostic is for: we find it, prioritize it, and build from there.
+      </p>
+      <p class="proof">Built at Nest, Apollo, and Alumni Ventures.</p>
+
+      <hr>
+
+      <div class="sub-kicker">What I can help with</div>
+      <ul>
+        <li>HR operations, process, and compliance</li>
+        <li>Payroll, benefits, and HRIS implementation</li>
+        <li>Onboarding and the employee lifecycle</li>
+        <li>Handbooks, policy, and documentation</li>
+        <li>EOR/PEO transitions and global expansion</li>
+        <li>Comp and employee relations within a build</li>
+      </ul>
+
+      <dl class="meta">
+        <dt>Format</dt><dd>Embedded retainer</dd>
+        <dt>Starts with</dt><dd>A Map engagement</dd>
+      </dl>
+
+      <div class="cta">Get in touch</div>
+    </aside>
+
+  </div>
+
+  <section class="pricing">
+    <div class="pricing-head">
+      <h3>How We Work Together</h3>
+      <div class="caption">Three tiers, not hourly. Scope calibrated to complexity.</div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Tier</th>
+          <th>Format</th>
+          <th>Investment</th>
+          <th>Right For</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="tier-name">Map</td>
+          <td class="format">Fixed fee</td>
+          <td class="investment">
+            <span class="starting">Starting at</span>
+            <span class="amount">$3,500</span>
+          </td>
+          <td class="right-for">The diagnostic. Defined output, defined end. A clear picture of what is broken and what it would take to fix it.</td>
+        </tr>
+        <tr>
+          <td class="tier-name">Build</td>
+          <td class="format">15+ hrs/wk</td>
+          <td class="investment">
+            <span class="starting">Starting at</span>
+            <span class="amount">$5,000 / mo</span>
+          </td>
+          <td class="right-for">Embedded retainer. Heavy build phase — HR ops, systems, payroll, benefits, onboarding, handbooks. 30-day minimum.</td>
+        </tr>
+        <tr>
+          <td class="tier-name">Sustain</td>
+          <td class="format">On-call</td>
+          <td class="investment">
+            <span class="starting">Starting at</span>
+            <span class="amount">$1,500 / mo</span>
+          </td>
+          <td class="right-for">Post-build. Monthly check-in, on-call access, strategic input. For companies that have the foundation but want a partner on the bench.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <p class="note">
+    <strong>Note.</strong> Rate ranges reflect typical scope. Engagements almost always start with Map.<br>
+    Final scope is set after the diagnostic.
+  </p>
+
+  <footer class="footer">
+    <div class="footer-band">
+      <span class="name">Elaine Adamson</span>
+      <span><a href="https://elaineadamson.com">elaineadamson.com</a></span>
+      <span class="sep">/</span>
+      <span class="meta-text">California, working across US time zones</span>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
