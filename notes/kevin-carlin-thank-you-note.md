@@ -23,4 +23,4 @@ Elaine
 
 ---
 
-*Note: attach the one-pager (or send the link: https://elaineadamson.com/fractional-hr) before sending.*
+*Note: attach the one-pager PDF (`one-pagers/fractional-hr.html`, printed to PDF) before sending.*
