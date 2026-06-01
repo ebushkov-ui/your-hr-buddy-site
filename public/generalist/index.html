@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Elaine Adamson Consulting — Fractional HR, Full Generalist Scope</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Space+Grotesk:wght@500;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --royal: #3754DC;
+    --periwinkle: #8590E8;
+    --periwinkle-tint: #EEF0FB;
+    --ink: #14154A;
+    --muted: #6B6E8A;
+    --ground: #F8F6F0;
+    --line: #E3DED2;
+    --charcoal: #0F1126;
+    --white: #FFFFFF;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: #ECECEC;
+    font-family: 'DM Sans', Arial, sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .page {
+    width: 8.5in;
+    height: 11in;
+    margin: 0.5in auto;
+    background: var(--ground);
+    padding: 0.42in 0.5in 0 0.5in;
+    box-shadow: 0 6px 24px rgba(20,21,74,0.12);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* HEADER */
+  .header { display: flex; justify-content: space-between; align-items: flex-start; padding-bottom: 12px; border-bottom: 3px solid var(--royal); }
+  .brand { display: flex; align-items: center; gap: 14px; }
+  .logo-mark { width: 42px; height: 42px; background: var(--royal); display: grid; grid-template-columns: repeat(3,1fr); grid-template-rows: repeat(3,1fr); gap: 3px; padding: 6px; border-radius: 3px; }
+  .logo-mark span { background: var(--white); border-radius: 1px; }
+  .brand-text .name { font-family: 'Montserrat', Arial, sans-serif; font-weight: 800; font-size: 15.5px; letter-spacing: 0.04em; color: var(--ink); line-height: 1.1; }
+  .brand-text .tag { font-family: 'DM Sans', Arial, sans-serif; font-size: 9.5px; font-weight: 500; letter-spacing: 0.18em; color: var(--muted); margin-top: 4px; text-transform: uppercase; }
+  .focus { text-align: right; }
+  .focus .label { font-size: 9.5px; font-weight: 500; letter-spacing: 0.18em; color: var(--muted); text-transform: uppercase; }
+  .focus .value { font-family: 'Space Grotesk', Arial, sans-serif; font-weight: 700; font-size: 11.5px; letter-spacing: 0.08em; color: var(--royal); text-transform: uppercase; margin-top: 4px; }
+
+  /* INTRO */
+  .intro { margin-top: 12px; font-size: 12px; line-height: 1.5; color: var(--ink); }
+  .intro strong { color: var(--royal); font-weight: 700; }
+
+  /* CAPABILITY GRID */
+  .grid-label { margin-top: 14px; font-size: 9px; font-weight: 700; letter-spacing: 0.22em; color: var(--muted); text-transform: uppercase; }
+  .capabilities { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; margin-top: 7px; }
+  .cap { background: var(--periwinkle-tint); border-left: 3px solid var(--royal); padding: 10px 12px; }
+  .cap .kicker { font-size: 8.5px; font-weight: 700; letter-spacing: 0.22em; color: var(--royal); text-transform: uppercase; }
+  .cap h2 { font-family: 'Space Grotesk', Arial, sans-serif; font-weight: 700; font-size: 13.5px; color: var(--ink); margin-top: 3px; line-height: 1.15; }
+  .cap ul { list-style: none; margin-top: 7px; }
+  .cap li { font-size: 9.5px; color: var(--ink); line-height: 1.4; padding-left: 11px; position: relative; margin-top: 3px; }
+  .cap li::before { content: "\00B7"; position: absolute; left: 0; color: var(--royal); font-weight: 700; }
+
+  /* SIGNATURE CARD (replaces the 6th tile in the grid) */
+  .cap.sig { background: var(--royal); border-left: none; color: var(--white); display: flex; flex-direction: column; }
+  .cap.sig .kicker { color: var(--periwinkle); }
+  .cap.sig h2 { color: var(--white); }
+  .cap.sig p { font-size: 10px; line-height: 1.45; margin-top: 7px; color: rgba(255,255,255,0.95); }
+  .cap.sig p strong { color: var(--white); font-weight: 700; }
+
+  /* WHERE I COME IN */
+  .referral { margin-top: 12px; background: var(--white); border: 1px solid var(--line); padding: 11px 16px; }
+  .referral-head { padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+  .referral-head h3 { font-family: 'Space Grotesk', Arial, sans-serif; font-weight: 700; font-size: 14px; color: var(--royal); display: inline; }
+  .referral-head .caption { font-size: 9.5px; color: var(--muted); margin-top: 2px; }
+  .referral .lead { font-size: 10px; line-height: 1.45; color: var(--ink); margin-top: 8px; }
+  .triggers { display: grid; grid-template-columns: 1fr 1fr; column-gap: 20px; row-gap: 7px; margin-top: 8px; }
+  .triggers p { font-size: 9.5px; line-height: 1.4; color: var(--ink); }
+  .triggers strong { color: var(--royal); font-weight: 700; }
+
+  /* FOOTER BAND */
+  .footer { margin-top: auto; padding-top: 10px; }
+  .footer-band { background: var(--royal); color: var(--white); padding: 10px 18px; display: flex; justify-content: center; align-items: center; gap: 14px; font-size: 10.5px; flex-wrap: wrap; }
+  .footer-band .name { font-family: 'Space Grotesk', Arial, sans-serif; font-weight: 700; letter-spacing: 0.04em; }
+  .footer-band a { color: var(--periwinkle); text-decoration: none; font-weight: 500; }
+  .footer-band a.book { color: var(--white); font-weight: 700; border: 1px solid rgba(255,255,255,0.55); border-radius: 3px; padding: 4px 12px; letter-spacing: 0.04em; }
+  .footer-band .sep { opacity: 0.5; }
+  .footer-band .meta-text { color: rgba(255,255,255,0.85); }
+
+  @media print {
+    @page { size: Letter; margin: 0; }
+    html, body { background: var(--ground); }
+    .page { margin: 0; box-shadow: none; width: 8.5in; height: 11in; }
+    .footer-band a.book { border-color: rgba(255,255,255,0.55); }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="header">
+    <div class="brand">
+      <div class="logo-mark" aria-hidden="true">
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+      </div>
+      <div class="brand-text">
+        <div class="name">ELAINE ADAMSON CONSULTING</div>
+        <div class="tag">Build, reset or refresh your HR ops</div>
+      </div>
+    </div>
+    <div class="focus">
+      <div class="label">Engagement Focus</div>
+      <div class="value">Series A to 500 employees</div>
+    </div>
+  </header>
+
+  <p class="intro">
+    Fractional HR for scaling companies that have outgrown what got them here. I cover the full generalist scope, lead the diagnostic, do the build, and hand back a function that runs without me. <strong>If something on the people side is breaking and you need a senior operator who can both find the real problem and fix it, this is the full picture of what I do.</strong>
+  </p>
+
+  <div class="grid-label">What I Can Do</div>
+
+  <div class="capabilities">
+
+    <div class="cap">
+      <div class="kicker">01 &middot; Function</div>
+      <h2>HR Strategy &amp; Build</h2>
+      <ul>
+        <li>HR function build or rebuild from the ground up</li>
+        <li>People diagnostics that separate noise from what is actually broken</li>
+        <li>Org design, headcount planning, leveling frameworks</li>
+        <li>Handbooks, policies, and manager playbooks</li>
+      </ul>
+    </div>
+
+    <div class="cap">
+      <div class="kicker">02 &middot; Systems</div>
+      <h2>Systems &amp; People Data</h2>
+      <ul>
+        <li>HRIS selection, implementation, and migration (Rippling, Workday, ChartHop, BambooHR, HiBob, others)</li>
+        <li>People data cleanup so reporting is fast and defensible</li>
+        <li>Dashboards, people analytics, source-of-truth design</li>
+        <li>Cross-functional workflows with Finance, IT, and Legal</li>
+      </ul>
+    </div>
+
+    <div class="cap">
+      <div class="kicker">03 &middot; Compliance</div>
+      <h2>Payroll, Benefits &amp; Compliance</h2>
+      <ul>
+        <li>US multi-state payroll setup, cleanup, and provider transitions</li>
+        <li>Benefits design, broker selection, open enrollment, 401(k)</li>
+        <li>Federal and state compliance: FMLA, ACA, wage and hour, classification</li>
+        <li>I-9 audits, posters, leave administration, handbook updates</li>
+      </ul>
+    </div>
+
+    <div class="cap">
+      <div class="kicker">04 &middot; Lifecycle</div>
+      <h2>Employee Lifecycle</h2>
+      <ul>
+        <li>Onboarding programs that scale past 50, 100, 200 hires</li>
+        <li>Manager enablement and training</li>
+        <li>Employee relations, sensitive communications, terminations</li>
+        <li>Engagement, retention, and exit data</li>
+      </ul>
+    </div>
+
+    <div class="cap">
+      <div class="kicker">05 &middot; Global</div>
+      <h2>Global &amp; Scale</h2>
+      <ul>
+        <li>International expansion across multiple countries</li>
+        <li>EOR and PEO off-ramps to local payroll or owned entities</li>
+        <li>Entity setup support, employment contracts, statutory benefits</li>
+        <li>Multi-country payroll and benefits localization</li>
+      </ul>
+    </div>
+
+    <div class="cap sig">
+      <div class="kicker">How I work</div>
+      <h2>Diagnose First, Then Build</h2>
+      <p>
+        Most companies start fixing their people problems before they understand what is actually broken. I run a focused diagnostic, write up what I find, and build against it. <strong>EOR and PEO off-ramps are where I get called most often.</strong>
+      </p>
+    </div>
+
+  </div>
+
+  <section class="referral">
+    <div class="referral-head">
+      <h3>Where I Come In</h3>
+      <div class="caption">Series A and beyond, up to 500 employees, that have outgrown their people infrastructure.</div>
+    </div>
+    <p class="lead">The work usually lands with a founder, COO, CHRO, or CFO who knows something on the people side is broken but not what. You probably need me if one of these sounds familiar:</p>
+    <div class="triggers">
+      <p><strong>You need to get off a PEO or EOR.</strong> Started on Deel or Justworks for speed, now you need real entities and local payroll.</p>
+      <p><strong>You are Series A or B with no HR foundation.</strong> Headcount climbing, no systems, no handbook, people decisions made without frameworks.</p>
+      <p><strong>You are drowning in messy people data.</strong> Numbers living in too many places, none of them reliable, reporting that takes days.</p>
+      <p><strong>You are hiring internationally with no infrastructure behind it.</strong> Offers going out in new countries before anyone checked the legal and cultural reality.</p>
+      <p><strong>Your HRIS migration broke.</strong> A Rippling, Workday, or ChartHop rollout that stalled or never got finished.</p>
+      <p><strong>You need a senior People leader but not a full-time hire.</strong> Someone to come in, diagnose, build, and hand back something that runs without them.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-band">
+      <span class="name">Elaine Adamson</span>
+      <span class="sep">/</span>
+      <a href="mailto:elaine@elaineadamson.com">elaine@elaineadamson.com</a>
+      <span class="sep">/</span>
+      <a href="https://elaineadamson.com">elaineadamson.com</a>
+      <span class="sep">/</span>
+      <a class="book" href="https://www.elaineadamson.com/ReferralNetwork">Referral one-pager</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
