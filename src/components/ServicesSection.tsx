@@ -38,18 +38,13 @@ const ServicesSection = () => {
       style={{ borderRadius: "100px 100px 0 0" }}
     >
       <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-20">
-          <div className="max-w-xl">
-            <span className="text-sm font-heading font-bold text-accent uppercase tracking-[0.2em] block mb-4">
-              Services
-            </span>
-            <h2 className="font-heading text-5xl md:text-7xl font-bold tracking-tighter leading-none text-foreground">
-              What I do<span className="text-accent">.</span>
-            </h2>
-          </div>
-          <p className="text-xl text-muted-foreground italic max-w-xs">
-            "Diagnose first, then build what needs to exist."
-          </p>
+        <div className="mb-20 max-w-xl">
+          <span className="text-sm font-heading font-bold text-accent uppercase tracking-[0.2em] block mb-4">
+            Services
+          </span>
+          <h2 className="font-heading text-5xl md:text-7xl font-bold tracking-tighter leading-none text-foreground">
+            What I do<span className="text-accent">.</span>
+          </h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-12">
