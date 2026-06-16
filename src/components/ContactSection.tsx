@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { Mail, Phone, MapPin } from "lucide-react";
 
 const ContactSection = () => {
   useEffect(() => {
@@ -52,39 +51,38 @@ const ContactSection = () => {
   }, []);
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-primary text-primary-foreground">
-      <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <span className="text-sm font-heading font-semibold text-accent uppercase tracking-widest">Contact</span>
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mt-3 mb-6">
+    <section id="contact" className="bg-accent py-24 md:py-32 px-6">
+      <div className="container mx-auto">
+        <div
+          className="bg-card text-card-foreground p-10 md:p-20 flex flex-col lg:flex-row gap-16 shadow-2xl relative overflow-hidden"
+          style={{ borderRadius: "60px" }}
+        >
+          <div className="absolute top-0 right-0 w-64 h-64 bg-background rounded-full -mr-32 -mt-32 opacity-50" />
+
+          <div className="lg:w-1/2 relative">
+            <h2 className="font-heading text-5xl md:text-6xl font-bold tracking-tighter leading-tight mb-8">
               Tell me what
               <br />
               is broken<span className="text-accent">.</span>
             </h2>
-            <p className="text-lg opacity-70 mb-10 leading-relaxed max-w-md">
-              If something is cracking on your people side and you do not know where to start, that is the conversation. Book a call below or send me a note.
+            <p className="text-xl text-muted-foreground mb-12 max-w-md leading-relaxed">
+              If something is cracking on your people side and you do not know where to start, that is the conversation. Book a call to your right.
             </p>
-
-            <div className="space-y-4">
-              {[
-                { icon: Mail, text: "elaine@elaineadamson.com" },
-                { icon: Phone, text: "(650) 520-0339" },
-                { icon: MapPin, text: "Bay Area, CA" },
-              ].map((item) => (
-                <div key={item.text} className="flex items-center gap-3 opacity-70">
-                  <item.icon className="h-5 w-5 text-accent" />
-                  <span>{item.text}</span>
-                </div>
-              ))}
+            <div className="space-y-3">
+              <p className="text-lg font-bold">elaine@elaineadamson.com</p>
+              <p className="text-muted-foreground">(650) 520-0339</p>
+              <p className="text-muted-foreground">Bay Area, CA</p>
             </div>
           </div>
 
-          <div className="bg-card text-card-foreground rounded-lg p-4 md:p-6">
-            <h3 className="font-heading text-2xl font-bold mb-4">Book a call</h3>
+          <div
+            className="lg:w-1/2 bg-background p-6 md:p-8 relative"
+            style={{ borderRadius: "32px" }}
+          >
+            <h3 className="font-heading text-2xl font-bold mb-6">Book a call</h3>
             <div
               id="cal-inline-embed"
-              className="w-full overflow-hidden rounded-md"
+              className="w-full overflow-hidden rounded-2xl"
               style={{ minHeight: "600px" }}
             />
             <p className="text-sm text-muted-foreground mt-4 text-center">
