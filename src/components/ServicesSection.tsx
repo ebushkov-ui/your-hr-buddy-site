@@ -4,44 +4,69 @@ const services = [
   {
     icon: Search,
     title: "Diagnose what is broken",
-    description: "Most companies start fixing before they understand the real problem. I run a five-day diagnostic across your people data, systems, compliance posture, and operating model. You walk out knowing exactly where the risk is, what is costing you money, and what to fix first.",
+    description:
+      "Most companies start fixing before they understand the real problem. I run a five-day diagnostic across your people data, systems, compliance posture, and operating model. You walk out knowing exactly where the risk is, what is costing you money, and what to fix first.",
+    blob: "60% 40% 30% 70% / 60% 30% 70% 40%",
+    rotate: "rotate-3 group-hover:rotate-12",
+    offset: "",
   },
   {
     icon: Wrench,
     title: "Build the foundation",
-    description: "Clean up the data. Stand up the systems. Build the HR function from the ground up. Payroll, HRIS, onboarding, policy, compliance, manager workflows. The plumbing nobody had time to put in, built so it holds when you add the next hundred people.",
+    description:
+      "Clean up the data. Stand up the systems. Build the HR function from the ground up. Payroll, HRIS, onboarding, policy, compliance, manager workflows. The plumbing nobody had time to put in, built so it holds when you add the next hundred people.",
+    blob: "40% 60% 70% 30% / 50% 60% 40% 50%",
+    rotate: "-rotate-3 group-hover:-rotate-12",
+    offset: "md:mt-12",
   },
   {
     icon: Globe,
     title: "Move off your EOR or PEO",
-    description: "When companies outgrow Deel, Rippling, or TriNet, they need real entities and local payroll. I take you off, stand up the entity infrastructure, build the compliance foundation, and own the transition end-to-end. Mexico, Japan, and beyond. Almost nobody specializes in this. I do.",
+    description:
+      "When companies outgrow Deel, Rippling, or TriNet, they need real entities and local payroll. I take you off, stand up the entity infrastructure, build the compliance foundation, and own the transition end-to-end. Mexico, Japan, and beyond. Almost nobody specializes in this. I do.",
+    blob: "70% 30% 50% 50% / 30% 40% 60% 70%",
+    rotate: "rotate-6 group-hover:rotate-0",
+    offset: "",
   },
 ];
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-24 md:py-32 bg-secondary">
-      <div className="container mx-auto px-6">
-        <div className="max-w-2xl mb-16">
-          <span className="text-sm font-heading font-semibold text-accent uppercase tracking-widest">Services</span>
-          <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mt-3 mb-4">
-            What I do<span className="text-accent">.</span>
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Diagnose first, then build what needs to exist.
+    <section
+      id="services"
+      className="bg-card py-24 md:py-32 px-6 relative z-10"
+      style={{ borderRadius: "100px 100px 0 0" }}
+    >
+      <div className="container mx-auto">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-20">
+          <div className="max-w-xl">
+            <span className="text-sm font-heading font-bold text-accent uppercase tracking-[0.2em] block mb-4">
+              Services
+            </span>
+            <h2 className="font-heading text-5xl md:text-7xl font-bold tracking-tighter leading-none text-foreground">
+              What I do<span className="text-accent">.</span>
+            </h2>
+          </div>
+          <p className="text-xl text-muted-foreground italic max-w-xs">
+            "Diagnose first, then build what needs to exist."
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-12">
           {services.map((service) => (
-            <div
-              key={service.title}
-              className="group bg-card rounded-lg p-8 border border-border hover:border-accent/40 transition-all duration-300 hover:shadow-lg hover:shadow-accent/5"
-            >
-              <div className="h-12 w-12 rounded-lg bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent/20 transition-colors">
-                <service.icon className="h-6 w-6 text-accent" />
+            <div key={service.title} className={`relative group ${service.offset}`}>
+              <div
+                className="absolute -inset-6 bg-background scale-95 opacity-0 group-hover:opacity-100 group-hover:scale-100 transition-all duration-700 -z-10"
+                style={{ borderRadius: service.blob }}
+              />
+              <div
+                className={`w-16 h-16 bg-accent/10 text-accent rounded-2xl flex items-center justify-center mb-8 ${service.rotate} transition-transform duration-500`}
+              >
+                <service.icon className="h-8 w-8" strokeWidth={1.5} />
               </div>
-              <h3 className="font-heading text-xl font-semibold text-foreground mb-2">{service.title}</h3>
+              <h3 className="font-heading text-2xl font-bold text-foreground mb-4">
+                {service.title}
+              </h3>
               <p className="text-muted-foreground leading-relaxed">{service.description}</p>
             </div>
           ))}
