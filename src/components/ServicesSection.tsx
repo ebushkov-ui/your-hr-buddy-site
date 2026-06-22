@@ -1,29 +1,29 @@
-import { Layers, Globe, Compass } from "lucide-react";
+import { Users, Compass, ClipboardCheck } from "lucide-react";
 
 const services = [
   {
-    icon: Layers,
-    title: "Build the HR foundation",
+    icon: Users,
+    title: "Fractional HR Partnership",
     description:
-      "The plumbing nobody had time to put in. Clean up the people data, stand up the systems, and build the HR function from the ground up — payroll, HRIS, onboarding, policy, compliance, manager workflows. Delivered as an embedded engagement: I sit inside the team, take the wheel, and build it so it holds when you add the next hundred people.",
+      "Your embedded HR function. I start with a diagnostic so we are fixing the right things, then handle day-to-day operations, employee relations, compliance, benefits renewals, HR tech implementation, and strategic people support. Same dedicated partner, every time — without the overhead of a full-time hire.",
     blob: "60% 40% 30% 70% / 60% 30% 70% 40%",
     rotate: "rotate-3 group-hover:rotate-12",
     offset: "",
   },
   {
-    icon: Globe,
-    title: "Get off your EOR or PEO",
+    icon: Compass,
+    title: "Strategic Advisory",
     description:
-      "Deel and Rippling get you started. They are not where you stay. When leadership has already made promises — start dates, comp, benefits — without understanding the legal and cultural reality of the country, I walk in and unwind it. Real entities, local payroll, compliant benefits, end-to-end. Currently live in Japan and the UK. Almost no one specializes in this. I do.",
+      "You do not need ongoing support — you need the right conversation at the right moment. I come in for targeted sessions on org design, people decisions, culture challenges, compensation structure, or scaling a team, and help you move forward with clarity.",
     blob: "40% 60% 70% 30% / 50% 60% 40% 50%",
     rotate: "-rotate-3 group-hover:-rotate-12",
     offset: "md:mt-12",
   },
   {
-    icon: Compass,
-    title: "Diagnose before you fix",
+    icon: ClipboardCheck,
+    title: "Project-Based Support",
     description:
-      "Most companies start fixing before they understand what is actually broken. The Map engagement is a fixed-scope diagnostic across your people data, systems, compliance posture, and operating model. You walk out with a clear picture of the real problem, what it will cost to fix, and what to do first — whether or not you keep working with me.",
+      "A specific need, a defined scope, and a clean handoff. I begin with a focused diagnostic so the scope is actually right, then deliver HR audits, employee handbooks, manager training, offsite design, EOR or PEO off-ramping, system cleanup, and more — documented and ready for your team to run.",
     blob: "70% 30% 50% 50% / 30% 40% 60% 70%",
     rotate: "rotate-6 group-hover:rotate-0",
     offset: "",
