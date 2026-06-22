@@ -38,13 +38,16 @@ const ServicesSection = () => {
       style={{ borderRadius: "100px 100px 0 0" }}
     >
       <div className="container mx-auto">
-        <div className="mb-20 max-w-xl">
+        <div className="mb-20 max-w-2xl">
           <span className="text-sm font-heading font-bold text-accent uppercase tracking-[0.2em] block mb-4">
             Services
           </span>
           <h2 className="font-heading text-5xl md:text-7xl font-bold tracking-tighter leading-none text-foreground">
             What I do<span className="text-accent">.</span>
           </h2>
+          <p className="mt-6 text-muted-foreground text-lg leading-relaxed">
+            Every engagement starts with a clear-eyed diagnostic — because fixing the wrong problem is expensive. From there, we choose the shape of support that fits your stage.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-12">
