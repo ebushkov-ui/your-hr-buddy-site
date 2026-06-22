@@ -1,29 +1,29 @@
-import { Users, Compass, ClipboardCheck } from "lucide-react";
+import { Layers, Globe, Compass } from "lucide-react";
 
 const services = [
   {
-    icon: Users,
-    title: "Fractional HR Partnership",
+    icon: Layers,
+    title: "Build the HR foundation",
     description:
-      "Your embedded HR function without the embedded overhead. I act as your dedicated people partner — handling employee relations, compliance, manager coaching, hiring rhythm, and the day-to-day work that would otherwise land on your desk. You get continuity, not a rotating cast.",
+      "The plumbing nobody had time to put in. Clean up the people data, stand up the systems, and build the HR function from the ground up — payroll, HRIS, onboarding, policy, compliance, manager workflows. Delivered as an embedded engagement: I sit inside the team, take the wheel, and build it so it holds when you add the next hundred people.",
     blob: "60% 40% 30% 70% / 60% 30% 70% 40%",
     rotate: "rotate-3 group-hover:rotate-12",
     offset: "",
   },
   {
-    icon: Compass,
-    title: "Strategic Advisory",
+    icon: Globe,
+    title: "Get off your EOR or PEO",
     description:
-      "No retainer, no standing meetings — just the right conversation when you need it. I come in for targeted sessions on org design, hard people decisions, or culture challenges that are slowing the business. You bring the question; I bring the framework. You leave with a clear move.",
+      "Deel and Rippling get you started. They are not where you stay. When leadership has already made promises — start dates, comp, benefits — without understanding the legal and cultural reality of the country, I walk in and unwind it. Real entities, local payroll, compliant benefits, end-to-end. Currently live in Japan and the UK. Almost no one specializes in this. I do.",
     blob: "40% 60% 70% 30% / 50% 60% 40% 50%",
     rotate: "-rotate-3 group-hover:-rotate-12",
     offset: "md:mt-12",
   },
   {
-    icon: ClipboardCheck,
-    title: "Project-Based Support",
+    icon: Compass,
+    title: "Diagnose before you fix",
     description:
-      "A defined need, a clear scope, and a clean handoff. HR audits, employee handbooks, manager training, offsite design, system cleanup — I build it, document it, and give it back so your team can run it without me.",
+      "Most companies start fixing before they understand what is actually broken. The Map engagement is a fixed-scope diagnostic across your people data, systems, compliance posture, and operating model. You walk out with a clear picture of the real problem, what it will cost to fix, and what to do first — whether or not you keep working with me.",
     blob: "70% 30% 50% 50% / 30% 40% 60% 70%",
     rotate: "rotate-6 group-hover:rotate-0",
     offset: "",
