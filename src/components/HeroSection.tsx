@@ -34,11 +34,11 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-2xl text-foreground max-w-2xl mb-6 leading-relaxed font-medium">
-            For founders, COOs, and CHROs at companies up to 500 employees. Build, reset, or refresh your people operations.
+            For founders, COOs, and CHROs at companies scaling faster than their HR infrastructure can hold.
           </p>
 
           <p className="text-base md:text-lg text-muted-foreground max-w-xl mb-10 leading-relaxed">
-            I diagnose what is broken before anyone starts fixing it. Twenty years building People functions for companies that have outgrown what got them here. I get embedded, I get it done, and I do it fast.
+            I diagnose what is actually broken — not what you think is broken — then build the foundation that lets you keep growing. Twenty years across a 40-person startup to Google. Embedded, hands-on, fast. People call me the janitor. I wear it proudly.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
