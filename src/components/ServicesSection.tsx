@@ -46,7 +46,7 @@ const ServicesSection = () => {
             What I do<span className="text-accent">.</span>
           </h2>
           <p className="mt-6 text-muted-foreground text-lg leading-relaxed">
-            Every engagement starts with a clear-eyed diagnostic — because fixing the wrong problem is expensive. From there, we choose the shape of support that fits your stage.
+            Three ways I work with companies scaling faster than their HR infrastructure. Every engagement starts with diagnosing what is actually broken — because fixing the wrong thing is the most expensive mistake on the people side.
           </p>
         </div>
 
