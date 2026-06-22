@@ -1,29 +1,29 @@
-import { Search, Wrench, Globe } from "lucide-react";
+import { Users, Compass, ClipboardCheck } from "lucide-react";
 
 const services = [
   {
-    icon: Search,
-    title: "Diagnose what is broken",
+    icon: Users,
+    title: "Fractional HR Partnership",
     description:
-      "Most companies start fixing before they understand the real problem. I run a five-day diagnostic across your people data, systems, compliance posture, and operating model. You walk out knowing exactly where the risk is, what is costing you money, and what to fix first.",
+      "Your embedded HR function without the embedded overhead. I act as your dedicated people partner — handling employee relations, compliance, manager coaching, hiring rhythm, and the day-to-day work that would otherwise land on your desk. You get continuity, not a rotating cast.",
     blob: "60% 40% 30% 70% / 60% 30% 70% 40%",
     rotate: "rotate-3 group-hover:rotate-12",
     offset: "",
   },
   {
-    icon: Wrench,
-    title: "Build the foundation",
+    icon: Compass,
+    title: "Strategic Advisory",
     description:
-      "Clean up the data. Stand up the systems. Build the HR function from the ground up. Payroll, HRIS, onboarding, policy, compliance, manager workflows. The plumbing nobody had time to put in, built so it holds when you add the next hundred people.",
+      "No retainer, no standing meetings — just the right conversation when you need it. I come in for targeted sessions on org design, hard people decisions, or culture challenges that are slowing the business. You bring the question; I bring the framework. You leave with a clear move.",
     blob: "40% 60% 70% 30% / 50% 60% 40% 50%",
     rotate: "-rotate-3 group-hover:-rotate-12",
     offset: "md:mt-12",
   },
   {
-    icon: Globe,
-    title: "Move off your EOR or PEO",
+    icon: ClipboardCheck,
+    title: "Project-Based Support",
     description:
-      "When companies outgrow Deel, Rippling, or TriNet, they need real entities and local payroll. I take you off, stand up the entity infrastructure, build the compliance foundation, and own the transition end-to-end. Mexico, Japan, and beyond. Almost nobody specializes in this. I do.",
+      "A defined need, a clear scope, and a clean handoff. HR audits, employee handbooks, manager training, offsite design, system cleanup — I build it, document it, and give it back so your team can run it without me.",
     blob: "70% 30% 50% 50% / 30% 40% 60% 70%",
     rotate: "rotate-6 group-hover:rotate-0",
     offset: "",
