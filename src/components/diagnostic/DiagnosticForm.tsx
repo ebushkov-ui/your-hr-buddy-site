@@ -60,14 +60,15 @@ const DiagnosticForm = ({ compact = false }: Props) => {
     }
     setSubmitting(true);
     const computedTier = scoreToTier(score, maxScore, answers);
-    const { error } = await supabase.from("diagnostic_leads").insert({
+    const payload = {
       name: parsed.data.name,
       email: parsed.data.email,
       company: parsed.data.company || null,
       score,
       tier: computedTier,
       answers,
-    });
+    };
+    const { error } = await supabase.from("diagnostic_leads").insert(payload);
     setSubmitting(false);
     if (error) {
       toast({
@@ -77,6 +78,12 @@ const DiagnosticForm = ({ compact = false }: Props) => {
       });
       return;
     }
+    // Fire-and-forget export to Google Drive
+    supabase.functions
+      .invoke("export-lead-to-drive", {
+        body: { ...payload, created_at: new Date().toISOString() },
+      })
+      .catch((err) => console.error("drive export failed", err));
     setTier(computedTier);
     setStep("result");
   };
