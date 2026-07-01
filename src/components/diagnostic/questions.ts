@@ -119,7 +119,7 @@ export const TIER_COPY: Record<Tier, { label: string; headline: string; body: st
   green: {
     label: "Green — Healthy",
     headline: "Your HR is healthy.",
-    body: "You've built a solid foundation. The work now is staying ahead of the next scaling stage — here's what to watch as you grow. If a specific project or advisory conversation would help, let's talk.",
+    body: "You've built a solid foundation. The work now is staying ahead of the next scaling stage. If you want a second set of eyes on where things could break, let's talk.",
     color: "text-emerald-700",
     ring: "ring-emerald-500/40 bg-emerald-500/10",
     dot: "bg-emerald-500",
@@ -135,7 +135,7 @@ export const TIER_COPY: Record<Tier, { label: string; headline: string; body: st
   red: {
     label: "Red — Real Risk",
     headline: "There's real risk here.",
-    body: "This isn't a judgment — it's the reality for a lot of companies scaling faster than their people function. The risk compounds quietly until something breaks publicly. This is worth a conversation. Let's get on a call.",
+    body: "This is the reality for a lot of companies scaling faster than their people function. The risk compounds quietly until something breaks publicly. Let's get on a call.",
     color: "text-rose-700",
     ring: "ring-rose-500/40 bg-rose-500/10",
     dot: "bg-rose-500",
