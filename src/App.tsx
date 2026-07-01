@@ -8,6 +8,7 @@ import FractionalHR from "./pages/FractionalHR";
 import InternationalExpansion from "./pages/InternationalExpansion";
 import Onboarding from "./pages/Onboarding";
 import ReferralNetwork from "./pages/ReferralNetwork";
+import Diagnostic from "./pages/Diagnostic";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/international-expansion" element={<InternationalExpansion />} />
           <Route path="/onboarding" element={<Onboarding />} />
           <Route path="/referral-network" element={<ReferralNetwork />} />
+          <Route path="/diagnostic" element={<Diagnostic />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
