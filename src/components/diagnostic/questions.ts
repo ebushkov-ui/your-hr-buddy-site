@@ -1,117 +1,141 @@
 export type Choice = { label: string; value: 0 | 1 | 2 };
 export type Question = {
   id: string;
-  area: "Compliance" | "HR Tech" | "People Ops" | "Org Design";
+  area: string;
   prompt: string;
   choices: Choice[];
 };
 
 export const QUESTIONS: Question[] = [
   {
-    id: "compliance",
-    area: "Compliance",
-    prompt:
-      "How confident are you that you're compliant across every state (and country) where you have employees?",
+    id: "staffing",
+    area: "HR Staffing",
+    prompt: "How is HR staffed right now?",
     choices: [
-      { label: "Fully mapped — registrations, handbooks, and postings are current everywhere.", value: 2 },
-      { label: "Mostly — I know we have gaps but nothing urgent I'm aware of.", value: 1 },
-      { label: "Honestly, not confident. We've been moving fast and I'm not sure what we've missed.", value: 0 },
+      { label: "We have a dedicated HR leader or team with real capacity.", value: 2 },
+      { label: "We have someone handling HR, but it's not their only job.", value: 1 },
+      { label: "HR tasks fall to the founder, COO, or office manager.", value: 0 },
     ],
   },
   {
-    id: "handbook",
-    area: "Compliance",
-    prompt: "When was your employee handbook last reviewed by someone who actually knows HR law?",
+    id: "people-data",
+    area: "People Data",
+    prompt: "How confident are you in your people data?",
     choices: [
-      { label: "In the last 12 months.", value: 2 },
-      { label: "1–3 years ago, or we have one but nobody has looked at it lately.", value: 1 },
-      { label: "We don't have one, or it's a template someone downloaded.", value: 0 },
+      { label: "Our headcount, org structure, and comp data are accurate and in one place.", value: 2 },
+      { label: "We have the data but it's spread across multiple systems and hard to pull.", value: 1 },
+      { label: "We're not confident the numbers are right and we know it.", value: 0 },
     ],
   },
   {
-    id: "hris",
-    area: "HR Tech",
-    prompt: "How would you describe your HRIS, payroll, and benefits systems?",
+    id: "compliance-audit",
+    area: "Compliance",
+    prompt: "When did you last audit your HR compliance posture?",
     choices: [
-      { label: "One source of truth, integrated, and data we actually trust.", value: 2 },
-      { label: "Multiple systems, some duplication, data cleanup happens manually.", value: 1 },
-      { label: "Spreadsheets, EOR/PEO black box, or systems no one owns.", value: 0 },
+      { label: "Within the last 12 months.", value: 2 },
+      { label: "We've never done a formal audit but we're probably fine.", value: 1 },
+      { label: "We don't know what we don't know.", value: 0 },
+    ],
+  },
+  {
+    id: "international",
+    area: "Global",
+    prompt: "Are you hiring or managing employees outside the US?",
+    choices: [
+      { label: "No international hiring yet.", value: 2 },
+      { label: "We use an EOR like Deel to handle it.", value: 1 },
+      { label: "We have international employees and we've built or are building local entities.", value: 0 },
+    ],
+  },
+  {
+    id: "bus-factor",
+    area: "Resilience",
+    prompt: "What happens to your HR operations if the person running them leaves?",
+    choices: [
+      { label: "Someone else could pick it up. It's documented and not a one-person show.", value: 2 },
+      { label: "It would be painful but we'd figure it out.", value: 1 },
+      { label: "It would break. That person is the process.", value: 0 },
     ],
   },
   {
     id: "onboarding",
     area: "People Ops",
-    prompt: "What does onboarding look like for a new hire on day one?",
+    prompt: "How does onboarding work at your company?",
     choices: [
-      { label: "Documented, repeatable, and the same experience every time.", value: 2 },
-      { label: "There's a checklist, but it depends who's running it.", value: 1 },
-      { label: "It's ad-hoc — the manager figures it out.", value: 0 },
+      { label: "We have a documented, repeatable process that actually gets followed.", value: 2 },
+      { label: "We have something, but it depends on who's doing the hiring.", value: 1 },
+      { label: "Every new hire gets a different experience.", value: 0 },
     ],
   },
   {
-    id: "employee-relations",
-    area: "People Ops",
-    prompt: "When a manager comes to you with a performance or people issue, what happens?",
+    id: "manager-enablement",
+    area: "Manager Enablement",
+    prompt: "How are your managers handling day-to-day people decisions?",
     choices: [
-      { label: "There's a clear process and someone qualified handles it.", value: 2 },
-      { label: "We figure it out case by case — sometimes it goes well, sometimes not.", value: 1 },
-      { label: "It usually escalates or gets avoided until it's a real problem.", value: 0 },
+      { label: "They have frameworks and know when to escalate.", value: 2 },
+      { label: "They figure it out but we see inconsistency across the org.", value: 1 },
+      { label: "They come to HR (or the founder) for everything.", value: 0 },
     ],
   },
   {
-    id: "org-design",
-    area: "Org Design",
-    prompt: "Do you have a defined leveling framework and comp bands?",
+    id: "strategic-seat",
+    area: "Strategic Role",
+    prompt: "When does HR get involved in business decisions?",
     choices: [
-      { label: "Yes — levels, bands, and a promotion process everyone understands.", value: 2 },
-      { label: "Partially — we have something but it's inconsistent across teams.", value: 1 },
-      { label: "No — comp and titles are negotiated one-off.", value: 0 },
+      { label: "Before decisions are made — we're in the room.", value: 2 },
+      { label: "After decisions are made, to figure out the people logistics.", value: 1 },
+      { label: "HR isn't part of strategic conversations.", value: 0 },
     ],
   },
   {
-    id: "ownership",
-    area: "Org Design",
-    prompt: "Who owns HR at your company today?",
+    id: "state-of-hr",
+    area: "Overall",
+    prompt: "How would you describe the state of your HR right now?",
     choices: [
-      { label: "A dedicated HR/People leader with the right experience for our stage.", value: 2 },
-      { label: "A generalist, office manager, or founder wearing the HR hat part-time.", value: 1 },
-      { label: "No one really — it's whoever has time when something breaks.", value: 0 },
+      { label: "Functional and scaling with the business.", value: 2 },
+      { label: "Functional but held together with duct tape.", value: 1 },
+      { label: "Behind where we need to be and we know it.", value: 0 },
     ],
   },
 ];
 
-export const AREAS = ["Compliance", "HR Tech", "People Ops", "Org Design"] as const;
-
 export type Tier = "green" | "yellow" | "red";
 
-export function scoreToTier(score: number, max: number): Tier {
-  const pct = score / max;
-  if (pct >= 0.75) return "green";
-  if (pct >= 0.4) return "yellow";
-  return "red";
+// Tier by counts of red/yellow/green answers, per user's scoring logic:
+// - Multiple reds (2+) => red
+// - Mostly green (majority green, no more than 1 red) => green
+// - Otherwise => yellow (manageable gaps)
+export function scoreToTier(_score: number, _max: number, answers?: Record<string, number>): Tier {
+  if (!answers) return "yellow";
+  const values = Object.values(answers);
+  const reds = values.filter((v) => v === 0).length;
+  const greens = values.filter((v) => v === 2).length;
+  if (reds >= 2) return "red";
+  if (greens >= Math.ceil(values.length * 0.6) && reds <= 1) return "green";
+  return "yellow";
 }
 
 export const TIER_COPY: Record<Tier, { label: string; headline: string; body: string; color: string; ring: string; dot: string }> = {
   green: {
-    label: "Green — Solid Foundation",
-    headline: "Your HR operations are in good shape.",
-    body: "You've got the fundamentals right. The work now is optimization — sharpening what's already working and staying ahead of the next scaling stage. If a specific project or advisory conversation would help, let's talk.",
+    label: "Green — Healthy",
+    headline: "Your HR is healthy.",
+    body: "You've built a solid foundation. The work now is staying ahead of the next scaling stage — here's what to watch as you grow. If a specific project or advisory conversation would help, let's talk.",
     color: "text-emerald-700",
     ring: "ring-emerald-500/40 bg-emerald-500/10",
     dot: "bg-emerald-500",
   },
   yellow: {
-    label: "Yellow — Cracks Forming",
-    headline: "You're in the messy middle.",
-    body: "Some pieces are working, others are held together with duct tape. This is exactly the stage where the wrong fix is more expensive than the problem. A focused diagnostic will tell you where to spend the next dollar — and where to leave things alone.",
+    label: "Yellow — Manageable Gaps",
+    headline: "You have manageable gaps.",
+    body: "Some things are working, others aren't — and it's not always obvious which is which. A diagnostic would show you where to focus first so you're not spending time or money on the wrong fix.",
     color: "text-amber-700",
     ring: "ring-amber-500/40 bg-amber-500/10",
     dot: "bg-amber-500",
   },
   red: {
-    label: "Red — Urgent",
-    headline: "Your HR infrastructure is behind your growth.",
-    body: "This isn't a judgment — it's the reality for most companies scaling faster than their people function. The risk (compliance, retention, culture) compounds quietly until something breaks publicly. Let's get on a call and figure out the first three things to fix.",
+    label: "Red — Real Risk",
+    headline: "There's real risk here.",
+    body: "This isn't a judgment — it's the reality for a lot of companies scaling faster than their people function. The risk compounds quietly until something breaks publicly. This is worth a conversation. Let's get on a call.",
     color: "text-rose-700",
     ring: "ring-rose-500/40 bg-rose-500/10",
     dot: "bg-rose-500",

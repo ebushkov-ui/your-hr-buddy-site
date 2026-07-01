@@ -59,7 +59,7 @@ const DiagnosticForm = ({ compact = false }: Props) => {
       return;
     }
     setSubmitting(true);
-    const computedTier = scoreToTier(score, maxScore);
+    const computedTier = scoreToTier(score, maxScore, answers);
     const { error } = await supabase.from("diagnostic_leads").insert({
       name: parsed.data.name,
       email: parsed.data.email,
