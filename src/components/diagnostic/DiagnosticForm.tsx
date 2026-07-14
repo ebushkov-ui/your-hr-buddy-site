@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ArrowRight, ArrowLeft, CheckCircle2 } from "lucide-react";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
@@ -7,6 +7,28 @@ import { Label } from "@/components/ui/label";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { QUESTIONS, TIER_COPY, scoreToTier, type Tier } from "./questions";
+
+const RECAPTCHA_SITE_KEY = "6LcepFMtAAAAAJ-3SlNozqWeV0rF4tT4-Ihu2F0C";
+
+declare global {
+  interface Window {
+    grecaptcha?: {
+      ready: (cb: () => void) => void;
+      execute: (siteKey: string, opts: { action: string }) => Promise<string>;
+    };
+  }
+}
+
+const loadRecaptcha = () => {
+  if (typeof window === "undefined") return;
+  if (document.getElementById("recaptcha-v3-script")) return;
+  const s = document.createElement("script");
+  s.id = "recaptcha-v3-script";
+  s.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
+  s.async = true;
+  s.defer = true;
+  document.head.appendChild(s);
+};
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name required").max(100),
@@ -27,6 +49,10 @@ const DiagnosticForm = ({ compact = false }: Props) => {
   const [contact, setContact] = useState({ name: "", email: "", company: "" });
   const [submitting, setSubmitting] = useState(false);
   const [tier, setTier] = useState<Tier | null>(null);
+
+  useEffect(() => {
+    loadRecaptcha();
+  }, []);
 
   const maxScore = QUESTIONS.length * 2;
   const score = useMemo(
@@ -59,6 +85,47 @@ const DiagnosticForm = ({ compact = false }: Props) => {
       return;
     }
     setSubmitting(true);
+
+    // reCAPTCHA v3 verification
+    try {
+      if (!window.grecaptcha) {
+        throw new Error("reCAPTCHA not loaded");
+      }
+      const token: string = await new Promise((resolve, reject) => {
+        window.grecaptcha!.ready(async () => {
+          try {
+            const t = await window.grecaptcha!.execute(RECAPTCHA_SITE_KEY, {
+              action: "diagnostic_submit",
+            });
+            resolve(t);
+          } catch (err) {
+            reject(err);
+          }
+        });
+      });
+      const { data: verify, error: verifyError } = await supabase.functions.invoke(
+        "verify-recaptcha",
+        { body: { token, action: "diagnostic_submit" } },
+      );
+      if (verifyError || !verify?.success) {
+        setSubmitting(false);
+        toast({
+          title: "Couldn't verify submission",
+          description: "Please refresh and try again.",
+          variant: "destructive",
+        });
+        return;
+      }
+    } catch (err) {
+      setSubmitting(false);
+      toast({
+        title: "Verification unavailable",
+        description: "Please refresh and try again.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     const computedTier = scoreToTier(score, maxScore, answers);
     const payload = {
       name: parsed.data.name,
