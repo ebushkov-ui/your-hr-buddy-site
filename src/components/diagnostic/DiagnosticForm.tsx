@@ -86,11 +86,12 @@ const DiagnosticForm = ({ compact = false }: Props) => {
     }
     setSubmitting(true);
 
-    // reCAPTCHA v3 verification
+    // reCAPTCHA v3 — used to score, never to block a real person.
+    // If the check is unavailable or errors, we still save the lead and flag it.
+    let recaptchaScore: number | null = null;
+    let spamFlagged = false;
     try {
-      if (!window.grecaptcha) {
-        throw new Error("reCAPTCHA not loaded");
-      }
+      if (!window.grecaptcha) throw new Error("reCAPTCHA not loaded");
       const token: string = await new Promise((resolve, reject) => {
         window.grecaptcha!.ready(async () => {
           try {
@@ -103,27 +104,17 @@ const DiagnosticForm = ({ compact = false }: Props) => {
           }
         });
       });
-      const { data: verify, error: verifyError } = await supabase.functions.invoke(
-        "verify-recaptcha",
-        { body: { token, action: "diagnostic_submit" } },
-      );
-      if (verifyError || !verify?.success) {
-        setSubmitting(false);
-        toast({
-          title: "Couldn't verify submission",
-          description: "Please refresh and try again.",
-          variant: "destructive",
-        });
-        return;
-      }
-    } catch (err) {
-      setSubmitting(false);
-      toast({
-        title: "Verification unavailable",
-        description: "Please refresh and try again.",
-        variant: "destructive",
+      const { data: verify } = await supabase.functions.invoke("verify-recaptcha", {
+        body: { token, action: "diagnostic_submit" },
       });
-      return;
+      if (typeof verify?.score === "number") {
+        recaptchaScore = verify.score;
+        spamFlagged = verify.score < 0.5;
+      } else {
+        spamFlagged = true; // verification unavailable — save but mark for review
+      }
+    } catch {
+      spamFlagged = true;
     }
 
     const computedTier = scoreToTier(score, maxScore, answers);
@@ -134,8 +125,11 @@ const DiagnosticForm = ({ compact = false }: Props) => {
       score,
       tier: computedTier,
       answers,
+      recaptcha_score: recaptchaScore,
+      spam_flagged: spamFlagged,
     };
     const { error } = await supabase.from("diagnostic_leads").insert(payload);
+
     setSubmitting(false);
     if (error) {
       toast({
