@@ -29,6 +29,7 @@ Deno.serve(async (req) => {
       body: params.toString(),
     });
     const data = await res.json();
+    console.log('siteverify response', JSON.stringify(data));
 
     const passed =
       data.success === true &&
@@ -37,12 +38,18 @@ Deno.serve(async (req) => {
       (!action || data.action === action);
 
     return new Response(
-      JSON.stringify({ success: passed, score: data.score ?? null, action: data.action ?? null }),
+      JSON.stringify({
+        success: passed,
+        score: data.score ?? null,
+        action: data.action ?? null,
+        errors: data['error-codes'] ?? null,
+      }),
       {
         status: 200,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       },
     );
+
   } catch (err) {
     console.error('verify-recaptcha error', err);
     return new Response(JSON.stringify({ success: false, error: 'Verification failed' }), {
