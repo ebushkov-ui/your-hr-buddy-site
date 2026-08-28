@@ -1,6 +1,6 @@
 import { corsHeaders } from 'npm:@supabase/supabase-js@2/cors';
 
-const RESEND_ENDPOINT = 'https://api.resend.com/emails';
+const RESEND_GATEWAY_URL = 'https://connector-gateway.lovable.dev/resend/emails';
 const NOTIFY_EMAIL = 'elaine@elaineadamson.com';
 
 type Choice = { label: string; value: 0 | 1 | 2 };
@@ -123,19 +123,21 @@ Deno.serve(async (req) => {
       </div>
     `;
 
+    const lovableApiKey = Deno.env.get('LOVABLE_API_KEY');
     const resendKey = Deno.env.get('RESEND_API_KEY');
     const fromAddress = Deno.env.get('LEAD_NOTIFY_FROM') || 'HR Diagnostic <onboarding@resend.dev>';
-    if (!resendKey) {
-      console.error('RESEND_API_KEY not configured');
+    if (!lovableApiKey || !resendKey) {
+      console.error('LOVABLE_API_KEY or RESEND_API_KEY not configured');
       return new Response(JSON.stringify({ error: 'connector not configured' }), {
         status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       });
     }
 
-    const res = await fetch(RESEND_ENDPOINT, {
+    const res = await fetch(RESEND_GATEWAY_URL, {
       method: 'POST',
       headers: {
-        Authorization: `Bearer ${resendKey}`,
+        Authorization: `Bearer ${lovableApiKey}`,
+        'X-Connection-Api-Key': resendKey,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
