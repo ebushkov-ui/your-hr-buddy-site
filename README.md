@@ -21,3 +21,7 @@ Site runs at http://localhost:8080.
 ## Deployment
 
 Pushes to `main` deploy automatically to Vercel. Live at https://elaineadamson.com.
+
+## Tools
+
+See [TOOLS.md](./TOOLS.md) for a plain-English breakdown of every external tool this site uses (Lovable, Supabase, Resend, Google Drive, reCAPTCHA, Squarespace, Vercel, etc.) and when you'd need each one.
