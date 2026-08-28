@@ -92,7 +92,7 @@ const DiagnosticForm = ({ compact = false }: Props) => {
     let spamFlagged = false;
     try {
       if (!window.grecaptcha) throw new Error("reCAPTCHA not loaded");
-      const token: string = await new Promise((resolve, reject) => {
+      const recaptchaPromise = new Promise<string>((resolve, reject) => {
         window.grecaptcha!.ready(async () => {
           try {
             const t = await window.grecaptcha!.execute(RECAPTCHA_SITE_KEY, {
@@ -104,6 +104,14 @@ const DiagnosticForm = ({ compact = false }: Props) => {
           }
         });
       });
+      // Some ad blockers / privacy tools stub window.grecaptcha without ever
+      // invoking the ready() callback, which would hang this promise forever
+      // and block the lead from ever being saved. Cap it so we always fall
+      // through to the "verification unavailable" path below instead.
+      const timeoutPromise = new Promise<never>((_, reject) => {
+        setTimeout(() => reject(new Error("reCAPTCHA timed out")), 4000);
+      });
+      const token = await Promise.race([recaptchaPromise, timeoutPromise]);
       const { data: verify } = await supabase.functions.invoke("verify-recaptcha", {
         body: { token, action: "diagnostic_submit" },
       });
