@@ -1,29 +1,35 @@
-import { Users, Compass, ClipboardCheck } from "lucide-react";
+import { Map as MapIcon, Hammer, ShieldCheck } from "lucide-react";
 
 const services = [
   {
-    icon: Users,
-    title: "Fractional HR Partnership",
+    icon: MapIcon,
+    title: "Map",
+    tag: "Fixed fee",
+    tagline: "Find what's actually broken.",
     description:
-      "Your embedded HR function. I start with a diagnostic so we are fixing the right things, then handle day-to-day operations, employee relations, compliance, benefits renewals, HR tech implementation, and strategic people support. Same dedicated partner, every time, without the overhead of a full-time hire.",
+      "The diagnostic. Defined output, defined end. I go through your people data, systems, contracts, and compliance, and talk to the people running them. You get a clear picture of what is broken, what to fix first, and what it takes.",
     blob: "60% 40% 30% 70% / 60% 30% 70% 40%",
     rotate: "rotate-3 group-hover:rotate-12",
     offset: "",
   },
   {
-    icon: Compass,
-    title: "Strategic Advisory",
+    icon: Hammer,
+    title: "Build",
+    tag: "15+ hrs/wk",
+    tagline: "Fix it and build the foundation.",
     description:
-      "You do not need ongoing support. You need the right conversation at the right moment. I come in for targeted sessions on org design, people decisions, culture challenges, compensation structure, or scaling a team, and help you move forward with clarity.",
+      "I embed with your team and do the work. HR operations, HRIS cleanup and migrations, onboarding, handbooks, compliance, EOR off-ramps. Not a deck of recommendations. 30-day minimum.",
     blob: "40% 60% 70% 30% / 50% 60% 40% 50%",
     rotate: "-rotate-3 group-hover:-rotate-12",
     offset: "md:mt-12",
   },
   {
-    icon: ClipboardCheck,
-    title: "Project-Based Support",
+    icon: ShieldCheck,
+    title: "Sustain",
+    tag: "On-call",
+    tagline: "Keep it fixed.",
     description:
-      "A specific need, a defined scope, and a clean handoff. I begin with a focused diagnostic so the scope is actually right, then deliver HR audits, employee handbooks, manager training, offsite design, EOR or PEO off-ramping, system cleanup, and more. Documented and ready for your team to run.",
+      "Once the foundation holds, I stay on the bench. Monthly check-in, on-call access, and a second opinion before the big people decisions.",
     blob: "70% 30% 50% 50% / 30% 40% 60% 70%",
     rotate: "rotate-6 group-hover:rotate-0",
     offset: "",
@@ -46,7 +52,7 @@ const ServicesSection = () => {
             What I do<span className="text-accent">.</span>
           </h2>
           <p className="mt-6 text-muted-foreground text-lg leading-relaxed">
-            Three ways I work with companies scaling faster than their HR infrastructure. Every engagement starts with diagnosing what is actually broken, because fixing the wrong thing is the most expensive mistake on the people side.
+            Three phases. Almost every engagement starts with Map, because fixing the wrong thing is the most expensive mistake on the people side. Nothing gets built until we know what is broken.
           </p>
         </div>
 
@@ -62,9 +68,15 @@ const ServicesSection = () => {
               >
                 <service.icon className="h-8 w-8" strokeWidth={1.5} />
               </div>
-              <h3 className="font-heading text-2xl font-bold text-foreground mb-4">
-                {service.title}
-              </h3>
+              <div className="flex items-baseline gap-3 mb-2">
+                <h3 className="font-heading text-2xl font-bold text-foreground">
+                  {service.title}
+                </h3>
+                <span className="text-xs font-heading font-bold uppercase tracking-widest text-muted-foreground">
+                  {service.tag}
+                </span>
+              </div>
+              <p className="font-heading font-bold text-accent mb-4">{service.tagline}</p>
               <p className="text-muted-foreground leading-relaxed">{service.description}</p>
             </div>
           ))}
