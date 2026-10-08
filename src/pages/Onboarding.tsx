@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import EngagementPricing from "@/components/EngagementPricing";
 
 const Onboarding = () => {
   return (
@@ -44,45 +45,7 @@ const Onboarding = () => {
           </ul>
         </div>
 
-        <div>
-          <h2 className="text-2xl font-bold mb-6">How we work together</h2>
-          <div className="space-y-6">
-            <div className="border-b pb-6">
-              <h3 className="font-bold text-lg mb-2">
-                Map <span className="text-xs font-normal text-muted-foreground">Fixed fee</span>
-              </h3>
-              <p className="text-muted-foreground mb-2">
-                The diagnostic. Defined output, defined end. A clear picture of
-                what is broken and what it takes to fix it.
-              </p>
-              <p className="font-bold text-primary">from $5,000</p>
-            </div>
-            <div className="border-b pb-6">
-              <h3 className="font-bold text-lg mb-2">
-                Build <span className="text-xs font-normal text-muted-foreground">15+ hrs/wk</span>
-              </h3>
-              <p className="text-muted-foreground mb-2">
-                Embedded retainer. Heavy build phase: HR ops, systems, onboarding
-                programs, handbooks. 30-day minimum.
-              </p>
-              <p className="font-bold text-primary">from $5,000/mo</p>
-            </div>
-            <div>
-              <h3 className="font-bold text-lg mb-2">
-                Sustain <span className="text-xs font-normal text-muted-foreground">On-call</span>
-              </h3>
-              <p className="text-muted-foreground mb-2">
-                Post-build. Monthly check-in, on-call access, strategic input for
-                teams that have the foundation but want a partner on the bench.
-              </p>
-              <p className="font-bold text-primary">from $1,500/mo</p>
-            </div>
-          </div>
-          <p className="text-sm text-muted-foreground mt-8">
-            <strong>Note.</strong> Rate ranges reflect typical scope. Engagements almost
-            always start with Map; final scope is set after the diagnostic.
-          </p>
-        </div>
+        <EngagementPricing buildFocus="HR ops, systems, onboarding programs, handbooks." />
       </main>
       <Footer />
     </div>
