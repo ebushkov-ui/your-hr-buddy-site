@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 const signals = [
   {
     title: "HR is still someone's side job.",
-    body: "Headcount is climbing, your COO or office manager runs payroll between everything else, and the handbook was last opened at 30 people. Or written by ChatGPT.",
+    body: "Headcount is climbing, your COO or office manager runs payroll between everything else, and the handbook was last opened at 30 people. Or written by AI.",
   },
   {
     title: "Nobody trusts the people data.",
