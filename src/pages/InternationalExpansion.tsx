@@ -8,7 +8,7 @@ const InternationalExpansion = () => {
       <main className="max-w-4xl mx-auto px-6 py-16">
         <div className="mb-12">
           <p className="text-sm font-semibold text-primary uppercase tracking-wide mb-2">
-            The specialty almost no one offers
+            International
           </p>
           <h1 className="text-4xl font-bold mb-6">EOR & PEO off-ramps</h1>
           <p className="text-lg text-muted-foreground mb-6">

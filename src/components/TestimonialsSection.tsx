@@ -4,7 +4,7 @@ const testimonials = [
   {
     quote:
       "She takes the time to diagnose before jumping to solutions. She stepped into a complex mix of vendors, country-specific requirements, and operational gaps, quickly brought structure to the chaos, and turned it into systems that are practical, scalable, and easy to run. For any people leader scaling internationally, building infrastructure, or trying to bring order to a fast-growing organization, she would be an exceptional partner to have on your team.",
-    attribution: "Chief People Officer, Alumni Ventures",
+    attribution: "Jennifer Rouse, Chief People Officer, Alumni Ventures",
     context: "Client: international expansion program",
     blob: "60% 40% 30% 70% / 60% 30% 70% 40%",
   },
