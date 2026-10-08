@@ -25,7 +25,7 @@ const DiagnosticTeaser = () => {
               Is your HR foundation keeping up<span className="text-accent">?</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-xl">
-              Seven quick questions. Green, yellow, or red — an honest read on where you actually stand across compliance, HR tech, people ops, and org design. Under two minutes.
+              Nine quick questions. Green, yellow, or red: an honest read on where you actually stand across compliance, HR tech, people ops, and org design. Under two minutes.
             </p>
             <Button
               asChild

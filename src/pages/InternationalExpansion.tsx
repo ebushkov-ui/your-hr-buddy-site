@@ -13,7 +13,7 @@ const InternationalExpansion = () => {
           <h1 className="text-4xl font-bold mb-6">EOR & PEO off-ramps</h1>
           <p className="text-lg text-muted-foreground mb-6">
             Companies use Deel or Remote because it's fast. Then they need real
-            entities, local payroll, and benefits — and by then leadership has
+            entities, local payroll, and benefits. By then leadership has
             already made promises that don't match the legal reality.{" "}
             <strong className="text-foreground">This is where I get called most often.</strong> I walk into
             the aftermath and get them out cleanly.
@@ -60,7 +60,7 @@ const InternationalExpansion = () => {
                 Build <span className="text-xs font-normal text-muted-foreground">15+ hrs/wk</span>
               </h3>
               <p className="text-muted-foreground mb-2">
-                Embedded retainer. The heavy build — entity transitions, payroll,
+                Embedded retainer. The heavy build: entity transitions, payroll,
                 benefits, and the compliance to back it. 30-day minimum.
               </p>
               <p className="font-bold text-primary">from $5,000/mo</p>

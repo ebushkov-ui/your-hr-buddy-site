@@ -30,7 +30,7 @@ const Diagnostic = () => {
               health check<span className="text-accent">.</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Diagnosing what's actually broken is the first thing I do with every client — so it's the first thing I'll do with you. Answer seven questions and get an honest Green / Yellow / Red read on your HR foundation.
+              Diagnosing what's actually broken is the first thing I do with every client, so it's the first thing I'll do with you. Answer nine questions and get an honest Green / Yellow / Red read on your HR foundation.
             </p>
           </div>
           <div className="max-w-3xl">

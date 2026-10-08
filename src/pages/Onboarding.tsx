@@ -14,8 +14,8 @@ const Onboarding = () => {
           <p className="text-lg text-muted-foreground mb-6">
             Most onboarding is a checklist and a stack of PDFs. Day one feels
             like paperwork. Day 90 feels like a guess. I build it end-to-end so
-            new hires get oriented, integrated, and evaluated on a clear cadence
-            — and managers actually know what to do.
+            new hires get oriented, integrated, and evaluated on a clear cadence,
+            and managers actually know what to do.
           </p>
           <p className="text-sm text-muted-foreground italic">
             Built at Nest, Apollo, and Alumni Ventures.
@@ -62,7 +62,7 @@ const Onboarding = () => {
                 Build <span className="text-xs font-normal text-muted-foreground">15+ hrs/wk</span>
               </h3>
               <p className="text-muted-foreground mb-2">
-                Embedded retainer. Heavy build phase — HR ops, systems, onboarding
+                Embedded retainer. Heavy build phase: HR ops, systems, onboarding
                 programs, handbooks. 30-day minimum.
               </p>
               <p className="font-bold text-primary">from $5,000/mo</p>

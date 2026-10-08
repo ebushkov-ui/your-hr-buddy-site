@@ -24,8 +24,8 @@ const QUESTIONS: Question[] = [
   ]},
   { id: "international", area: "Global", prompt: "Are you hiring or managing employees outside the US?", choices: [
     { label: "No international hiring yet.", value: 2 },
-    { label: "We use an EOR like Deel to handle it.", value: 1 },
-    { label: "We have international employees and we've built or are building local entities.", value: 0 },
+    { label: "We have international employees and we've built or are building local entities.", value: 1 },
+    { label: "We use an EOR like Deel to handle it.", value: 0 },
   ]},
   { id: "bus-factor", area: "Resilience", prompt: "What happens to your HR operations if the person running them leaves?", choices: [
     { label: "Someone else could pick it up. It's documented and not a one-person show.", value: 2 },
@@ -43,7 +43,7 @@ const QUESTIONS: Question[] = [
     { label: "They come to HR (or the founder) for everything.", value: 0 },
   ]},
   { id: "strategic-seat", area: "Strategic Role", prompt: "When does HR get involved in business decisions?", choices: [
-    { label: "Before decisions are made — we're in the room.", value: 2 },
+    { label: "Before decisions are made. We're in the room.", value: 2 },
     { label: "After decisions are made, to figure out the people logistics.", value: 1 },
     { label: "HR isn't part of strategic conversations.", value: 0 },
   ]},

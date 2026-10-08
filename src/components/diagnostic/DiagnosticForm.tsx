@@ -30,6 +30,26 @@ const loadRecaptcha = () => {
   document.head.appendChild(s);
 };
 
+// Some ad blockers / privacy tools stub window.grecaptcha without ever
+// invoking the ready() callback, which would hang forever. Cap the wait so
+// callers always fall through to their "verification unavailable" path.
+const getRecaptchaToken = (action: string): Promise<string> => {
+  if (!window.grecaptcha) return Promise.reject(new Error("reCAPTCHA not loaded"));
+  const recaptchaPromise = new Promise<string>((resolve, reject) => {
+    window.grecaptcha!.ready(async () => {
+      try {
+        resolve(await window.grecaptcha!.execute(RECAPTCHA_SITE_KEY, { action }));
+      } catch (err) {
+        reject(err);
+      }
+    });
+  });
+  const timeoutPromise = new Promise<never>((_, reject) => {
+    setTimeout(() => reject(new Error("reCAPTCHA timed out")), 4000);
+  });
+  return Promise.race([recaptchaPromise, timeoutPromise]);
+};
+
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name required").max(100),
   email: z.string().trim().email("Enter a valid email").max(255),
@@ -49,6 +69,7 @@ const DiagnosticForm = ({ compact = false }: Props) => {
   const [contact, setContact] = useState({ name: "", email: "", company: "" });
   const [submitting, setSubmitting] = useState(false);
   const [tier, setTier] = useState<Tier | null>(null);
+  const [emailStatus, setEmailStatus] = useState<"sending" | "sent" | "failed">("sending");
 
   useEffect(() => {
     loadRecaptcha();
@@ -86,32 +107,12 @@ const DiagnosticForm = ({ compact = false }: Props) => {
     }
     setSubmitting(true);
 
-    // reCAPTCHA v3 — used to score, never to block a real person.
+    // reCAPTCHA v3: used to score, never to block a real person.
     // If the check is unavailable or errors, we still save the lead and flag it.
     let recaptchaScore: number | null = null;
     let spamFlagged = false;
     try {
-      if (!window.grecaptcha) throw new Error("reCAPTCHA not loaded");
-      const recaptchaPromise = new Promise<string>((resolve, reject) => {
-        window.grecaptcha!.ready(async () => {
-          try {
-            const t = await window.grecaptcha!.execute(RECAPTCHA_SITE_KEY, {
-              action: "diagnostic_submit",
-            });
-            resolve(t);
-          } catch (err) {
-            reject(err);
-          }
-        });
-      });
-      // Some ad blockers / privacy tools stub window.grecaptcha without ever
-      // invoking the ready() callback, which would hang this promise forever
-      // and block the lead from ever being saved. Cap it so we always fall
-      // through to the "verification unavailable" path below instead.
-      const timeoutPromise = new Promise<never>((_, reject) => {
-        setTimeout(() => reject(new Error("reCAPTCHA timed out")), 4000);
-      });
-      const token = await Promise.race([recaptchaPromise, timeoutPromise]);
+      const token = await getRecaptchaToken("diagnostic_submit");
       const { data: verify } = await supabase.functions.invoke("verify-recaptcha", {
         body: { token, action: "diagnostic_submit" },
       });
@@ -119,7 +120,7 @@ const DiagnosticForm = ({ compact = false }: Props) => {
         recaptchaScore = verify.score;
         spamFlagged = verify.score < 0.5;
       } else {
-        spamFlagged = true; // verification unavailable — save but mark for review
+        spamFlagged = true; // verification unavailable: save but mark for review
       }
     } catch {
       spamFlagged = true;
@@ -155,6 +156,18 @@ const DiagnosticForm = ({ compact = false }: Props) => {
       .catch((err) => console.error("drive export failed", err));
     setTier(computedTier);
     setStep("result");
+
+    // Email the prospect a copy. Needs a fresh token: reCAPTCHA tokens are single-use.
+    setEmailStatus("sending");
+    try {
+      const emailToken = await getRecaptchaToken("diagnostic_email");
+      const { error: emailError } = await supabase.functions.invoke("email-diagnostic-result", {
+        body: { token: emailToken, email: parsed.data.email, answers },
+      });
+      setEmailStatus(emailError ? "failed" : "sent");
+    } catch {
+      setEmailStatus("failed");
+    }
   };
 
   const reset = () => {
@@ -176,7 +189,7 @@ const DiagnosticForm = ({ compact = false }: Props) => {
               Am I the right fit for you?
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8 max-w-xl">
-              Seven quick questions across compliance, HR tech, people operations, and org design. You'll get a Green / Yellow / Red read on where your HR foundation actually stands — takes under two minutes.
+              Nine quick questions across compliance, HR tech, people operations, and org design. You'll get a Green / Yellow / Red read on where your HR foundation actually stands. Takes under two minutes.
             </p>
             <Button
               size="lg"
@@ -243,7 +256,7 @@ const DiagnosticForm = ({ compact = false }: Props) => {
               Where should I send your result?
             </h3>
             <p className="text-muted-foreground mb-8">
-              I'll show it on screen and keep a copy so I can follow up if — and only if — it looks like we might be a fit.
+              You'll see it on screen and get a copy by email. I'll only follow up if it looks like we might be a fit.
             </p>
             <div className="space-y-4 max-w-md">
               <div>
@@ -306,17 +319,23 @@ const DiagnosticForm = ({ compact = false }: Props) => {
             <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-2xl">
               {TIER_COPY[tier].body}
             </p>
-            <div className="flex items-center gap-3 text-sm text-muted-foreground mb-8">
+            <div className="flex items-center gap-3 text-sm text-muted-foreground mb-3">
               <CheckCircle2 className="h-4 w-4 text-emerald-500" />
               Score: {score} / {maxScore}
             </div>
+            <p className="text-sm text-muted-foreground mb-8">
+              {emailStatus === "sending" && `Sending a copy to ${contact.email}...`}
+              {emailStatus === "sent" && `A copy is on its way to ${contact.email}.`}
+              {emailStatus === "failed" &&
+                "I couldn't email you a copy, so grab a screenshot. Or email elaine@elaineadamson.com and I'll send it over."}
+            </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 asChild
                 size="lg"
                 className="bg-accent text-accent-foreground hover:bg-accent/90 font-heading font-bold rounded-full h-14 px-8"
               >
-                <a href="#contact">Book a call</a>
+                <a href="/#contact">Book a call</a>
               </Button>
               <Button
                 variant="outline"

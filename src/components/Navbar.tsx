@@ -6,15 +6,15 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const links = [
-    { label: "Services", href: "#services" },
-    { label: "About", href: "#about" },
-    { label: "Contact", href: "#contact" },
+    { label: "Services", href: "/#services" },
+    { label: "About", href: "/#about" },
+    { label: "Contact", href: "/#contact" },
   ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-6">
-        <a href="#" className="flex items-center" aria-label="Elaine Adamson Consulting">
+        <a href="/" className="flex items-center" aria-label="Elaine Adamson Consulting">
           <img src="/logo.png" alt="Elaine Adamson Consulting" className="h-9 w-auto" />
         </a>
         <div className="hidden md:flex items-center gap-8">
@@ -28,7 +28,7 @@ const Navbar = () => {
             </a>
           ))}
           <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 font-heading font-semibold">
-            <a href="#contact">Get in Touch</a>
+            <a href="/#contact">Get in Touch</a>
           </Button>
         </div>
         <button
@@ -52,7 +52,7 @@ const Navbar = () => {
             </a>
           ))}
           <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-heading font-semibold">
-            <a href="#contact" onClick={() => setOpen(false)}>Get in Touch</a>
+            <a href="/#contact" onClick={() => setOpen(false)}>Get in Touch</a>
           </Button>
         </div>
       )}

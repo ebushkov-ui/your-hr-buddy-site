@@ -38,7 +38,7 @@ const HeroSection = () => {
           </p>
 
           <p className="text-base md:text-lg text-muted-foreground max-w-xl mb-10 leading-relaxed">
-            I diagnose what is actually broken — not what you think is broken — then build the foundation that lets you keep growing. Twenty years across a 40-person startup to Google. Embedded, hands-on, fast. People call me the janitor. I wear it proudly.
+            Founders, COOs, and CHROs bring me in when the company has outgrown its HR. Twenty years, from a 40-person startup to Google. Embedded, hands-on, fast.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
@@ -61,9 +61,12 @@ const HeroSection = () => {
               <a href="#services">See How I Work</a>
             </Button>
           </div>
-          <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mt-6">
+          <a
+            href="#contact"
+            className="inline-block text-xs font-bold uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors mt-6"
+          >
             Schedule a 30-min call
-          </p>
+          </a>
         </div>
       </div>
     </section>

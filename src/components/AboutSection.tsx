@@ -27,7 +27,7 @@ const AboutSection = () => {
       />
       <div className="container mx-auto px-6 relative">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
-          {/* Left — Text */}
+          {/* Left: Text */}
           <div>
             <span className="text-sm font-heading font-bold text-accent uppercase tracking-[0.2em] block mb-6">
               About Elaine
@@ -51,7 +51,7 @@ const AboutSection = () => {
             </ul>
           </div>
 
-          {/* Right — Stats */}
+          {/* Right: Stats */}
           <div className="grid grid-cols-2 gap-6">
             {stats.map((stat) => (
               <div
