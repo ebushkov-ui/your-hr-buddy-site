@@ -178,11 +178,11 @@ Deno.serve(async (req) => {
 
     const lovableApiKey = Deno.env.get('LOVABLE_API_KEY');
     const resendKey = Deno.env.get('RESEND_API_KEY');
-    // Resend's shared test sender only delivers to the account owner, so prospect
-    // emails need a sender on a verified domain (e.g. elaine@elaineadamson.com).
-    const fromAddress = Deno.env.get('RESULT_EMAIL_FROM') || Deno.env.get('LEAD_NOTIFY_FROM');
-    if (!lovableApiKey || !resendKey || !fromAddress) {
-      console.error('LOVABLE_API_KEY, RESEND_API_KEY, or RESULT_EMAIL_FROM/LEAD_NOTIFY_FROM not configured');
+    // Must be on a domain verified in Resend; the shared test sender only
+    // delivers to the account owner.
+    const fromAddress = Deno.env.get('RESULT_EMAIL_FROM') || 'Elaine Adamson <elaine@elaineadamson.com>';
+    if (!lovableApiKey || !resendKey) {
+      console.error('LOVABLE_API_KEY or RESEND_API_KEY not configured');
       return json({ error: 'email not configured' }, 500);
     }
 
