@@ -66,11 +66,10 @@ const ContactSection = () => {
               is broken<span className="text-accent">.</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-12 max-w-md leading-relaxed">
-              If something is cracking on your people side and you do not know where to start, that is the conversation. Book a call to your right.
+              If something is cracking on your people side and you do not know where to start, that is the conversation. Pick a time that works.
             </p>
             <div className="space-y-3">
               <p className="text-lg font-bold">elaine@elaineadamson.com</p>
-              <p className="text-muted-foreground">(650) 520-0339</p>
               <p className="text-muted-foreground">Bay Area, CA</p>
             </div>
           </div>

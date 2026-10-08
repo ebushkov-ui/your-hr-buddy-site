@@ -4,13 +4,13 @@ const testimonials = [
   {
     quote:
       "She takes the time to diagnose before jumping to solutions. She stepped into a complex mix of vendors, country-specific requirements, and operational gaps, quickly brought structure to the chaos, and turned it into systems that are practical, scalable, and easy to run. For any people leader scaling internationally, building infrastructure, or trying to bring order to a fast-growing organization, she would be an exceptional partner to have on your team.",
-    attribution: "Chief People Officer",
-    context: "Managed Elaine directly",
+    attribution: "Jennifer Rouse, Chief People Officer, Alumni Ventures",
+    context: "Client: international expansion program",
     blob: "60% 40% 30% 70% / 60% 30% 70% 40%",
   },
   {
     quote:
-      "Truly a unicorn HR Ops manager. Frankly, she's a machine (in a really good way). Expedient, thorough, and dedicated. There hasn't been a process she couldn't improve, a project she couldn't wrangle in, or a new system she couldn't figure out, and always in record time. I'd recommend her for any role that requires a workhorse problem solver.",
+      "There hasn't been a process she couldn't improve, a project she couldn't wrangle in, or a new system she couldn't figure out, and always in record time.",
     attribution: "Former Manager",
     context: "Worked with Elaine directly",
     blob: "40% 60% 70% 30% / 50% 60% 40% 50%",

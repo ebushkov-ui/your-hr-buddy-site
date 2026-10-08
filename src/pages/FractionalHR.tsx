@@ -12,7 +12,7 @@ const FractionalHR = () => {
           </p>
           <h1 className="text-4xl font-bold mb-6">Not sure what you need?</h1>
           <p className="text-lg text-muted-foreground mb-6">
-            Most companies know something's off — onboarding, compliance, payroll,
+            Most companies know something's off: onboarding, compliance, payroll,
             the benefits renewal, the HRIS nobody set up right. They just can't
             name what to fix first. That's what the diagnostic is for:{" "}
             <strong className="text-foreground">
@@ -69,7 +69,7 @@ const FractionalHR = () => {
                 Build <span className="text-xs font-normal text-muted-foreground">15+ hrs/wk</span>
               </h3>
               <p className="text-muted-foreground mb-2">
-                Embedded retainer. Heavy build phase — HR ops, systems, onboarding
+                Embedded retainer. Heavy build phase: HR ops, systems, onboarding
                 programs, handbooks. 30-day minimum.
               </p>
               <p className="font-bold text-primary">from $5,000/mo</p>

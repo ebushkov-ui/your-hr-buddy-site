@@ -43,8 +43,8 @@ export const QUESTIONS: Question[] = [
     prompt: "Are you hiring or managing employees outside the US?",
     choices: [
       { label: "No international hiring yet.", value: 2 },
-      { label: "We use an EOR like Deel to handle it.", value: 1 },
-      { label: "We have international employees and we've built or are building local entities.", value: 0 },
+      { label: "We have international employees and we've built or are building local entities.", value: 1 },
+      { label: "We use an EOR like Deel to handle it.", value: 0 },
     ],
   },
   {
@@ -82,7 +82,7 @@ export const QUESTIONS: Question[] = [
     area: "Strategic Role",
     prompt: "When does HR get involved in business decisions?",
     choices: [
-      { label: "Before decisions are made — we're in the room.", value: 2 },
+      { label: "Before decisions are made. We're in the room.", value: 2 },
       { label: "After decisions are made, to figure out the people logistics.", value: 1 },
       { label: "HR isn't part of strategic conversations.", value: 0 },
     ],
@@ -117,7 +117,7 @@ export function scoreToTier(_score: number, _max: number, answers?: Record<strin
 
 export const TIER_COPY: Record<Tier, { label: string; headline: string; body: string; color: string; ring: string; dot: string }> = {
   green: {
-    label: "Green — Healthy",
+    label: "Green: Healthy",
     headline: "Your HR is healthy.",
     body: "You've built a solid foundation. The work now is staying ahead of the next scaling stage. If you want a second set of eyes on where things could break, let's talk.",
     color: "text-emerald-700",
@@ -125,15 +125,15 @@ export const TIER_COPY: Record<Tier, { label: string; headline: string; body: st
     dot: "bg-emerald-500",
   },
   yellow: {
-    label: "Yellow — Manageable Gaps",
+    label: "Yellow: Manageable Gaps",
     headline: "You have manageable gaps.",
-    body: "Some things are working, others aren't — and it's not always obvious which is which. A diagnostic would show you where to focus first so you're not spending time or money on the wrong fix.",
+    body: "Some things are working, others aren't, and it's not always obvious which is which. A diagnostic would show you where to focus first so you're not spending time or money on the wrong fix.",
     color: "text-amber-700",
     ring: "ring-amber-500/40 bg-amber-500/10",
     dot: "bg-amber-500",
   },
   red: {
-    label: "Red — Real Risk",
+    label: "Red: Real Risk",
     headline: "There's real risk here.",
     body: "This is the reality for a lot of companies scaling faster than their people function. The risk compounds quietly until something breaks publicly. Let's get on a call.",
     color: "text-rose-700",
