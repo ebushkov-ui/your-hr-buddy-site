@@ -1,4 +1,4 @@
-import { Users, Compass, ClipboardCheck, Map as MapIcon } from "lucide-react";
+import { Hammer, ShieldCheck, Clock, Map as MapIcon } from "lucide-react";
 
 const areas = [
   {
@@ -25,28 +25,28 @@ const areas = [
 
 const engagements = [
   {
-    icon: Users,
-    title: "Fractional Partnership",
+    icon: Hammer,
+    title: "Build",
     description:
-      "Your embedded HR function. Day-to-day operations, employee relations, compliance, benefits renewals, HR tech. Same person every time, without the overhead of a full-time hire.",
+      "The core engagement. I embed with your team at least 15 hours a week and do the work, whether that's a defined project or running your HR function. HR ops, HRIS cleanup, onboarding, handbooks, compliance, EOR off-ramps. Not a deck of recommendations.",
     blob: "60% 40% 30% 70% / 60% 30% 70% 40%",
     rotate: "rotate-3 group-hover:rotate-12",
     offset: "",
   },
   {
-    icon: ClipboardCheck,
-    title: "Project",
+    icon: ShieldCheck,
+    title: "Sustain",
     description:
-      "A specific need, a defined scope, and a clean handoff. HR audits, handbooks, manager training, system cleanup, EOR off-ramps. Documented and ready for your team to run.",
+      "The lighter relationship after a Build. Monthly check-ins, on-call access, and a second opinion before the big people decisions.",
     blob: "70% 30% 50% 50% / 30% 40% 60% 70%",
     rotate: "-rotate-3 group-hover:-rotate-12",
     offset: "md:mt-12",
   },
   {
-    icon: Compass,
-    title: "Advisory",
+    icon: Clock,
+    title: "Interim HR",
     description:
-      "You don't need ongoing support. You need the right conversation at the right moment. Targeted sessions on org design, comp structure, people decisions, or scaling a team.",
+      "Time-boxed coverage while you hire a permanent HR leader. A few hours a week for a few weeks, so nothing drops in the gap.",
     blob: "40% 60% 70% 30% / 50% 60% 40% 50%",
     rotate: "rotate-6 group-hover:rotate-0",
     offset: "",
@@ -106,12 +106,12 @@ const ServicesSection = () => {
               Map: the diagnostic
             </h3>
             <p className="text-muted-foreground leading-relaxed max-w-3xl">
-              Defined output, defined end. A clear picture of what is actually broken, what to fix first, and what it takes. Every engagement starts here, because fixing the wrong thing is the most expensive mistake on the people side.
+              Set scope, set end date. A clear picture of what is actually broken, what to fix first, and what it takes. This is how new clients start, because fixing the wrong thing is the most expensive mistake on the people side.
             </p>
           </div>
         </div>
 
-        <p className="font-heading font-bold text-foreground text-lg mb-10">Then, whatever fits:</p>
+        <p className="font-heading font-bold text-foreground text-lg mb-10">Then:</p>
 
         <div className="grid md:grid-cols-3 gap-12">
           {engagements.map((service) => (
