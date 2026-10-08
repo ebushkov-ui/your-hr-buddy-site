@@ -62,10 +62,10 @@ const ServicesSection = () => {
     >
       <div className="container mx-auto">
         <div className="mb-16 max-w-2xl">
-          <span className="text-sm font-heading font-bold text-accent uppercase tracking-[0.2em] block mb-4">
+          <span className="text-sm font-body font-bold text-accent uppercase tracking-[0.2em] block mb-4">
             Services
           </span>
-          <h2 className="font-heading text-5xl md:text-7xl font-bold tracking-tighter leading-none text-foreground">
+          <h2 className="font-heading text-5xl md:text-7xl font-bold tracking-tight leading-none text-foreground">
             What I do<span className="text-accent">.</span>
           </h2>
           <p className="mt-6 text-muted-foreground text-lg leading-relaxed">
@@ -86,10 +86,10 @@ const ServicesSection = () => {
         </div>
 
         <div className="mb-12 max-w-2xl">
-          <span className="text-sm font-heading font-bold text-accent uppercase tracking-[0.2em] block mb-4">
+          <span className="text-sm font-body font-bold text-accent uppercase tracking-[0.2em] block mb-4">
             How we work together
           </span>
-          <h2 className="font-heading text-4xl md:text-5xl font-bold tracking-tighter leading-tight text-foreground">
+          <h2 className="font-heading text-4xl md:text-5xl font-bold tracking-tight leading-tight text-foreground">
             It starts with Map<span className="text-accent">.</span>
           </h2>
         </div>

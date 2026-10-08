@@ -48,7 +48,7 @@ const SignalsSection = () => {
   return (
     <section className="pb-24 md:pb-32">
       <div className="container mx-auto px-6">
-        <h2 className="font-heading text-4xl md:text-6xl font-bold tracking-tighter leading-none text-foreground mb-4">
+        <h2 className="font-heading text-4xl md:text-6xl font-bold tracking-tight leading-none text-foreground mb-4">
           You probably need me if<span className="text-accent">...</span>
         </h2>
         <p className="text-muted-foreground text-lg mb-12">Tap the ones that sound like you.</p>
@@ -90,7 +90,7 @@ const SignalsSection = () => {
         <Button
           asChild
           size="lg"
-          className="bg-accent text-accent-foreground hover:bg-accent/90 font-heading font-bold text-base px-8 h-14 rounded-full group"
+          className="bg-accent text-accent-foreground hover:bg-accent/90 font-body font-semibold text-base px-8 h-14 rounded-full group"
         >
           <a href="#contact">
             {cta}

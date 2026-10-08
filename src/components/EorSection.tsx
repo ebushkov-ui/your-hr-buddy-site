@@ -33,10 +33,10 @@ const EorSection = () => {
       />
       <div className="container mx-auto px-6 relative">
         <div className="max-w-3xl mb-16">
-          <span className="text-sm font-heading font-bold text-accent uppercase tracking-[0.2em] block mb-6">
+          <span className="text-sm font-body font-bold text-accent uppercase tracking-[0.2em] block mb-6">
             Up close: EOR &amp; PEO off-ramps
           </span>
-          <h2 className="font-heading text-5xl md:text-7xl font-bold tracking-tighter leading-none mb-10">
+          <h2 className="font-heading text-5xl md:text-7xl font-bold tracking-tight leading-none mb-10">
             Off the EOR. Onto infrastructure you{" "}
             <span className="italic font-light">own.</span>
           </h2>
@@ -76,7 +76,7 @@ const EorSection = () => {
           <Button
             asChild
             size="lg"
-            className="lg:ml-auto bg-accent text-accent-foreground hover:bg-accent/90 font-heading font-bold text-base px-8 h-14 rounded-full group self-start lg:self-auto"
+            className="lg:ml-auto bg-accent text-accent-foreground hover:bg-accent/90 font-body font-semibold text-base px-8 h-14 rounded-full group self-start lg:self-auto"
           >
             <a href="#contact">
               Planning an exit? Let's map it.

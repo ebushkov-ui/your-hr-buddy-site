@@ -21,10 +21,10 @@ const Diagnostic = () => {
             <ArrowLeft className="h-4 w-4" /> Back home
           </Link>
           <div className="max-w-3xl mb-12">
-            <span className="text-sm font-heading font-bold text-accent uppercase tracking-[0.2em] block mb-4">
+            <span className="text-sm font-body font-bold text-accent uppercase tracking-[0.2em] block mb-4">
               Diagnostic
             </span>
-            <h1 className="font-heading text-5xl md:text-7xl font-bold tracking-tighter leading-[0.95] mb-6">
+            <h1 className="font-heading text-5xl md:text-7xl font-bold tracking-tight leading-[0.95] mb-6">
               The HR Operations
               <br />
               health check<span className="text-accent">.</span>
