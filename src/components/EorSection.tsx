@@ -34,7 +34,7 @@ const EorSection = () => {
       <div className="container mx-auto px-6 relative">
         <div className="max-w-3xl mb-16">
           <span className="text-sm font-heading font-bold text-accent uppercase tracking-[0.2em] block mb-6">
-            EOR &amp; PEO off-ramps
+            Up close: EOR &amp; PEO off-ramps
           </span>
           <h2 className="font-heading text-5xl md:text-7xl font-bold tracking-tighter leading-none mb-10">
             Off the EOR. Onto infrastructure you{" "}
