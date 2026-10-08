@@ -27,7 +27,7 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
-          <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 font-heading font-semibold">
+          <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 font-body font-semibold">
             <a href="/#contact">Get in Touch</a>
           </Button>
         </div>
@@ -51,7 +51,7 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
-          <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-heading font-semibold">
+          <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-body font-semibold">
             <a href="/#contact" onClick={() => setOpen(false)}>Get in Touch</a>
           </Button>
         </div>

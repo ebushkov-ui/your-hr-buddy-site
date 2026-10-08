@@ -29,10 +29,10 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Left: Text */}
           <div>
-            <span className="text-sm font-heading font-bold text-accent uppercase tracking-[0.2em] block mb-6">
+            <span className="text-sm font-body font-bold text-accent uppercase tracking-[0.2em] block mb-6">
               About Elaine
             </span>
-            <h2 className="font-heading text-5xl md:text-7xl font-bold tracking-tighter leading-none mb-10">
+            <h2 className="font-heading text-5xl md:text-7xl font-bold tracking-tight leading-none mb-10">
               People call me the{" "}
               <span className="italic font-light">Chief Problem Solver.</span>
             </h2>

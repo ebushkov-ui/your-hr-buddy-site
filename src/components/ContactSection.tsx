@@ -60,7 +60,7 @@ const ContactSection = () => {
           <div className="absolute top-0 right-0 w-64 h-64 bg-background rounded-full -mr-32 -mt-32 opacity-50" />
 
           <div className="lg:w-1/2 relative">
-            <h2 className="font-heading text-5xl md:text-6xl font-bold tracking-tighter leading-tight mb-8">
+            <h2 className="font-heading text-5xl md:text-6xl font-bold tracking-tight leading-tight mb-8">
               Tell me what
               <br />
               is broken<span className="text-accent">.</span>

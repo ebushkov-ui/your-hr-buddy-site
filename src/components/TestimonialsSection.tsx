@@ -25,10 +25,10 @@ const TestimonialsSection = () => {
     >
       <div className="container mx-auto">
         <div className="mb-16 max-w-xl">
-          <span className="text-sm font-heading font-bold text-accent uppercase tracking-[0.2em] block mb-4">
+          <span className="text-sm font-body font-bold text-accent uppercase tracking-[0.2em] block mb-4">
             What people say
           </span>
-          <h2 className="font-heading text-4xl md:text-6xl font-bold tracking-tighter leading-none text-foreground">
+          <h2 className="font-heading text-4xl md:text-6xl font-bold tracking-tight leading-none text-foreground">
             In their words<span className="text-accent">.</span>
           </h2>
         </div>

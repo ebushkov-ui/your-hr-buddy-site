@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['Space Grotesk', 'sans-serif'],
+        heading: ['Fraunces', 'Georgia', 'serif'],
         body: ['DM Sans', 'sans-serif'],
       },
       colors: {

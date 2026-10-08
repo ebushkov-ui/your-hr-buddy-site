@@ -182,7 +182,7 @@ const DiagnosticForm = ({ compact = false }: Props) => {
       <div className="p-8 md:p-12">
         {step === "intro" && (
           <div>
-            <span className="text-xs font-heading font-bold text-accent uppercase tracking-[0.2em] block mb-4">
+            <span className="text-xs font-body font-bold text-accent uppercase tracking-[0.2em] block mb-4">
               HR Operations Diagnostic
             </span>
             <h3 className="font-heading text-3xl md:text-4xl font-bold tracking-tight mb-4">
@@ -194,7 +194,7 @@ const DiagnosticForm = ({ compact = false }: Props) => {
             <Button
               size="lg"
               onClick={() => setStep("questions")}
-              className="bg-accent text-accent-foreground hover:bg-accent/90 font-heading font-bold rounded-full h-14 px-8 group"
+              className="bg-accent text-accent-foreground hover:bg-accent/90 font-body font-semibold rounded-full h-14 px-8 group"
             >
               Start the diagnostic
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -205,7 +205,7 @@ const DiagnosticForm = ({ compact = false }: Props) => {
         {step === "questions" && (
           <div>
             <div className="flex items-center justify-between mb-6">
-              <span className="text-xs font-heading font-bold text-muted-foreground uppercase tracking-[0.2em]">
+              <span className="text-xs font-body font-bold text-muted-foreground uppercase tracking-[0.2em]">
                 {current.area} · Question {qIndex + 1} of {QUESTIONS.length}
               </span>
               {qIndex > 0 && (
@@ -249,7 +249,7 @@ const DiagnosticForm = ({ compact = false }: Props) => {
 
         {step === "gate" && (
           <form onSubmit={handleSubmit}>
-            <span className="text-xs font-heading font-bold text-accent uppercase tracking-[0.2em] block mb-4">
+            <span className="text-xs font-body font-bold text-accent uppercase tracking-[0.2em] block mb-4">
               One last step
             </span>
             <h3 className="font-heading text-3xl md:text-4xl font-bold tracking-tight mb-3">
@@ -296,7 +296,7 @@ const DiagnosticForm = ({ compact = false }: Props) => {
                 type="submit"
                 disabled={submitting || !allAnswered}
                 size="lg"
-                className="bg-accent text-accent-foreground hover:bg-accent/90 font-heading font-bold rounded-full h-14 px-8 w-full sm:w-auto"
+                className="bg-accent text-accent-foreground hover:bg-accent/90 font-body font-semibold rounded-full h-14 px-8 w-full sm:w-auto"
               >
                 {submitting ? "Scoring..." : "Show my result"}
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -333,7 +333,7 @@ const DiagnosticForm = ({ compact = false }: Props) => {
               <Button
                 asChild
                 size="lg"
-                className="bg-accent text-accent-foreground hover:bg-accent/90 font-heading font-bold rounded-full h-14 px-8"
+                className="bg-accent text-accent-foreground hover:bg-accent/90 font-body font-semibold rounded-full h-14 px-8"
               >
                 <a href="/#contact">Book a call</a>
               </Button>
@@ -341,7 +341,7 @@ const DiagnosticForm = ({ compact = false }: Props) => {
                 variant="outline"
                 size="lg"
                 onClick={reset}
-                className="rounded-full h-14 px-8 font-heading font-bold border-2"
+                className="rounded-full h-14 px-8 font-body font-semibold border-2"
               >
                 Retake the diagnostic
               </Button>

@@ -17,11 +17,11 @@ const DiagnosticTeaser = () => {
           <div className="md:col-span-3 relative">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 text-accent mb-5">
               <Activity className="h-3.5 w-3.5" />
-              <span className="text-xs font-heading font-bold uppercase tracking-[0.15em]">
+              <span className="text-xs font-body font-bold uppercase tracking-[0.15em]">
                 Free diagnostic
               </span>
             </div>
-            <h2 className="font-heading text-4xl md:text-5xl font-bold tracking-tighter leading-tight mb-4">
+            <h2 className="font-heading text-4xl md:text-5xl font-bold tracking-tight leading-tight mb-4">
               Is your HR foundation keeping up<span className="text-accent">?</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-xl">
@@ -30,7 +30,7 @@ const DiagnosticTeaser = () => {
             <Button
               asChild
               size="lg"
-              className="bg-accent text-accent-foreground hover:bg-accent/90 font-heading font-bold rounded-full h-14 px-8 group"
+              className="bg-accent text-accent-foreground hover:bg-accent/90 font-body font-semibold rounded-full h-14 px-8 group"
             >
               <Link to="/diagnostic">
                 Take the diagnostic

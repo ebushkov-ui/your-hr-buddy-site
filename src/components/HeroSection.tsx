@@ -12,7 +12,7 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-5xl">
-          <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tighter text-foreground mb-8">
+          <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tight text-foreground mb-8">
             HR Consultant for scaling{" "}
             <span className="text-accent relative inline-block">
               startups.
@@ -45,7 +45,7 @@ const HeroSection = () => {
             <Button
               asChild
               size="lg"
-              className="bg-accent text-accent-foreground hover:bg-accent/90 hover:scale-105 transition-transform font-heading font-bold text-base px-8 h-14 rounded-full shadow-xl shadow-accent/10 group"
+              className="bg-accent text-accent-foreground hover:bg-accent/90 hover:scale-105 transition-transform font-body font-semibold text-base px-8 h-14 rounded-full shadow-xl shadow-accent/10 group"
             >
               <a href="#contact">
                 Hand me the mess
@@ -56,7 +56,7 @@ const HeroSection = () => {
               asChild
               variant="outline"
               size="lg"
-              className="font-heading font-bold text-base px-8 h-14 rounded-full border-2 border-foreground/10 hover:bg-foreground hover:text-background"
+              className="font-body font-semibold text-base px-8 h-14 rounded-full border-2 border-foreground/10 hover:bg-foreground hover:text-background"
             >
               <a href="#services">See How I Work</a>
             </Button>
