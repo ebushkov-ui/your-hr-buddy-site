@@ -13,7 +13,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-5xl">
           <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tighter text-foreground mb-8">
-            Fractional HR Consultant for scaling{" "}
+            HR Consultant for scaling{" "}
             <span className="text-accent relative inline-block">
               startups.
               <svg
@@ -34,7 +34,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-2xl text-foreground max-w-2xl mb-6 leading-relaxed font-medium">
-            For founders, COOs, and CHROs at companies scaling faster than their HR infrastructure can hold.
+            I find what's actually broken, fix it, and build the foundation so it stays fixed.
           </p>
 
           <p className="text-base md:text-lg text-muted-foreground max-w-xl mb-10 leading-relaxed">
