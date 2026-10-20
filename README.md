@@ -20,7 +20,9 @@ Site runs at http://localhost:8080.
 
 ## Deployment
 
-Pushes to `main` deploy automatically to Vercel. Live at https://elaineadamson.com.
+Pushes to `main` deploy automatically to Vercel. Live at https://www.elaineadamson.com.
+
+`npm run build` prerenders each route in `src/seo.ts` to static HTML (`scripts/prerender.mjs`) so search and AI crawlers see the content without running JavaScript.
 
 ## Tools
 

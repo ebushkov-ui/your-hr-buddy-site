@@ -10,9 +10,19 @@ const Footer = () => {
             consulting
           </span>
         </div>
-        <span className="text-sm opacity-50">
-          © {new Date().getFullYear()} Elaine Adamson Consulting. All rights reserved.
-        </span>
+        <div className="flex items-center gap-6 text-sm">
+          <a
+            href="https://www.linkedin.com/in/elainebushkov"
+            target="_blank"
+            rel="noopener"
+            className="opacity-70 hover:opacity-100 transition-opacity"
+          >
+            LinkedIn
+          </a>
+          <span className="opacity-50">
+            © {new Date().getFullYear()} Elaine Adamson Consulting. All rights reserved.
+          </span>
+        </div>
       </div>
     </footer>
   );

@@ -1,5 +1,10 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/diagnostic", "destination": "/diagnostic.html" },
+    { "source": "/fractional-hr", "destination": "/fractional-hr.html" },
+    { "source": "/international-expansion", "destination": "/international-expansion.html" },
+    { "source": "/onboarding", "destination": "/onboarding.html" },
+    { "source": "/referral-network", "destination": "/referral-network.html" },
+    { "source": "/(.*)", "destination": "/spa.html" }
   ]
 }

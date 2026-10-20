@@ -18,7 +18,7 @@ const steps = [
 
 const stats = [
   { value: "190+", label: "Employees moved off EORs" },
-  { value: "5", label: "Countries" },
+  { value: "5", label: "Countries off EOR" },
 ];
 
 const EorSection = () => {
