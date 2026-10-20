@@ -6,14 +6,7 @@ const testimonials = [
       "She takes the time to diagnose before jumping to solutions. She stepped into a complex mix of vendors, country-specific requirements, and operational gaps, quickly brought structure to the chaos, and turned it into systems that are practical, scalable, and easy to run. For any people leader scaling internationally, building infrastructure, or trying to bring order to a fast-growing organization, she would be an exceptional partner to have on your team.",
     attribution: "Jennifer Rouse, Chief People Officer, Alumni Ventures",
     context: "Client: international expansion program",
-    blob: "60% 40% 30% 70% / 60% 30% 70% 40%",
-  },
-  {
-    quote:
-      "There hasn't been a process she couldn't improve, a project she couldn't wrangle in, or a new system she couldn't figure out, and always in record time.",
-    attribution: "Former Manager",
-    context: "Worked with Elaine directly",
-    blob: "40% 60% 70% 30% / 50% 60% 40% 50%",
+    blob: "80px 160px 100px 180px / 80px 120px 140px 160px",
   },
 ];
 
@@ -33,13 +26,11 @@ const TestimonialsSection = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="max-w-4xl">
           {testimonials.map((t, i) => (
             <figure
               key={i}
-              className={`relative bg-background p-10 md:p-12 ${
-                i === 1 ? "md:mt-12" : ""
-              }`}
+              className="relative bg-background p-10 md:p-14"
               style={{ borderRadius: t.blob }}
             >
               <div className="w-12 h-12 bg-accent/10 text-accent rounded-full flex items-center justify-center mb-6">

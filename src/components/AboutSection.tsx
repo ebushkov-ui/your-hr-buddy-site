@@ -1,8 +1,9 @@
 import { Check } from "lucide-react";
+import headshot from "@/assets/elaine-adamson-headshot.webp";
 
 const reasons = [
   "20+ years in People Operations and HR strategy",
-  "Built global infrastructure across 7+ countries and 1,300+ employee orgs",
+  "Built global infrastructure across 7+ countries in orgs up to 1,300+ employees",
   "Deep stack experience: Workday, ADP, Rippling, ChartHop, BambooHR, Paylocity",
   "Eliminated 60% of manual workflows and delivered $200K+ in annual savings",
   "Background at Apollo, DigitalOcean, Nest Labs, Google, Intapp, and more",
@@ -29,6 +30,15 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Left: Text */}
           <div>
+            <img
+              src={headshot}
+              alt="Elaine Adamson, fractional HR consultant"
+              width={192}
+              height={192}
+              loading="lazy"
+              className="w-40 h-40 md:w-48 md:h-48 object-cover mb-10"
+              style={{ borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%" }}
+            />
             <span className="text-sm font-body font-bold text-accent uppercase tracking-[0.2em] block mb-6">
               About Elaine
             </span>

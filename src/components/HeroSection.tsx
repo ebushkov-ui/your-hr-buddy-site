@@ -38,7 +38,7 @@ const HeroSection = () => {
           </p>
 
           <p className="text-base md:text-lg text-muted-foreground max-w-xl mb-10 leading-relaxed">
-            Founders, COOs, and CHROs bring me in when the company has outgrown its HR. Twenty years, from a 40-person startup to Google. Embedded, hands-on, fast.
+            Founders, COOs, and CHROs bring me in when the company has outgrown its people infrastructure. Twenty years, from a 40-person startup to Google. Fractional, embedded, fast.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">

@@ -5,20 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
+    <!-- page-meta: scripts/prerender.mjs replaces this block per route (see src/seo.ts) -->
     <title>Elaine Adamson | Fractional HR Consultant for Scaling Startups</title>
-    <meta name="description" content="Fractional HR consultant for scaling startups. I diagnose what is broken before anyone starts fixing it. Twenty years building People functions for high-growth companies." />
-    <meta name="author" content="Elaine Adamson" />
-
+    <meta name="description" content="Fractional HR consultant for Series A+ startups. I find what's broken, fix it, and move teams off EORs. 20 years, startup to Google." />
+    <link rel="canonical" href="https://www.elaineadamson.com/" />
     <meta property="og:title" content="Elaine Adamson | Fractional HR Consultant for Scaling Startups" />
-    <meta property="og:description" content="I diagnose what is broken before anyone starts fixing it. Twenty years building People functions for high-growth companies." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://elaineadamson.com" />
-    <meta property="og:image" content="https://elaineadamson.com/og-image-v2.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:description" content="Fractional HR consultant for Series A+ startups. I find what's broken, fix it, and move teams off EORs. 20 years, startup to Google." />
+    <meta property="og:url" content="https://www.elaineadamson.com/" />
     <meta name="twitter:title" content="Elaine Adamson | Fractional HR Consultant for Scaling Startups" />
-    <meta name="twitter:description" content="I diagnose what is broken before anyone starts fixing it." />
-    <meta name="twitter:image" content="https://elaineadamson.com/og-image-v2.png" />
+    <meta name="twitter:description" content="Fractional HR consultant for Series A+ startups. I find what's broken, fix it, and move teams off EORs. 20 years, startup to Google." />
+    <!-- /page-meta -->
+
+    <meta name="author" content="Elaine Adamson" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.elaineadamson.com/og-image-v2.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://www.elaineadamson.com/og-image-v2.png" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://www.elaineadamson.com/#business",
+          "name": "Elaine Adamson Consulting",
+          "url": "https://www.elaineadamson.com/",
+          "logo": "https://www.elaineadamson.com/logo.png",
+          "description": "Fractional HR consulting for scaling startups: HR function builds, HRIS and people data cleanup, multi-state payroll and compliance, and EOR and PEO off-ramps.",
+          "email": "elaine@elaineadamson.com",
+          "address": { "@type": "PostalAddress", "addressRegion": "CA", "addressCountry": "US" },
+          "areaServed": "US",
+          "founder": { "@id": "https://www.elaineadamson.com/#elaine" },
+          "knowsAbout": ["Fractional HR", "HRIS implementation", "People data cleanup", "Multi-state payroll compliance", "EOR off-ramps", "PEO transitions", "International entity setup"]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://www.elaineadamson.com/#elaine",
+          "name": "Elaine Adamson",
+          "jobTitle": "Founder, Fractional HR Consultant",
+          "worksFor": { "@id": "https://www.elaineadamson.com/#business" },
+          "url": "https://www.elaineadamson.com/",
+          "sameAs": ["https://www.linkedin.com/in/elainebushkov"]
+        }
+      ]
+    }
+    </script>
   </head>
 
   <body>

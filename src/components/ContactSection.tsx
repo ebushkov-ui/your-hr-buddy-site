@@ -69,7 +69,18 @@ const ContactSection = () => {
               If something is cracking on your people side and you do not know where to start, that is the conversation. Pick a time that works.
             </p>
             <div className="space-y-3">
-              <p className="text-lg font-bold">elaine@elaineadamson.com</p>
+              <p className="text-lg font-bold">
+                elaine@elaineadamson.com
+                <span className="text-muted-foreground font-normal mx-3">·</span>
+                <a
+                  href="https://www.linkedin.com/in/elainebushkov"
+                  target="_blank"
+                  rel="noopener"
+                  className="text-accent hover:underline"
+                >
+                  LinkedIn
+                </a>
+              </p>
               <p className="text-muted-foreground">Bay Area, CA</p>
             </div>
           </div>
