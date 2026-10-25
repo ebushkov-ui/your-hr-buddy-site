@@ -59,7 +59,7 @@ const ReferralNetwork = () => {
               </p>
               <h3 className="text-xl font-bold mb-2">Global & Scale</h3>
               <p className="text-muted-foreground">
-                International expansion, EOR/PEO off-ramps, entity setup,
+                International expansion, EOR off-ramps, entity setup,
                 multi-country payroll and benefits.
               </p>
             </div>
@@ -76,10 +76,10 @@ const ReferralNetwork = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <p className="font-bold mb-2">
-                Needs off a PEO or EOR.
+                Needs off an EOR.
               </p>
               <p className="text-sm text-muted-foreground">
-                Started on Deel or Justworks for speed; now needs real entities and local payroll.
+                Started on Deel or Remote for speed; now needs real entities and local payroll.
               </p>
             </div>
             <div>

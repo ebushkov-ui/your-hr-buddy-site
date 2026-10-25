@@ -47,7 +47,7 @@ const FractionalHR = () => {
             </li>
             <li className="flex gap-3">
               <span className="text-primary">•</span>
-              <span>International expansion and EOR / PEO off-ramps</span>
+              <span>International expansion and EOR off-ramps</span>
             </li>
           </ul>
         </div>

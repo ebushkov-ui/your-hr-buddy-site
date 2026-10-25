@@ -11,7 +11,7 @@ const InternationalExpansion = () => {
           <p className="text-sm font-semibold text-primary uppercase tracking-wide mb-2">
             International
           </p>
-          <h1 className="text-4xl font-bold mb-6">EOR & PEO off-ramps</h1>
+          <h1 className="text-4xl font-bold mb-6">EOR off-ramps</h1>
           <p className="text-lg text-muted-foreground mb-6">
             Companies use Deel or Remote because it's fast. Then they need real
             entities, local payroll, and benefits. By then leadership has

@@ -19,7 +19,7 @@ const areas = [
   },
   {
     title: "Global & Scale",
-    description: "International expansion, EOR and PEO off-ramps, entity setup, multi-country payroll.",
+    description: "International expansion, EOR off-ramps, entity setup, multi-country payroll.",
   },
 ];
 
